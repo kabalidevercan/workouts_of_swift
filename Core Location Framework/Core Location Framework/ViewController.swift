@@ -6,44 +6,75 @@
 //
 
 import UIKit
-import CoreLocation
 import MapKit
 
 class ViewController: UIViewController {
+ 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
     
- 
-    var locationManager:CLLocationManager = CLLocationManager()
-    @IBOutlet weak var enlemLabel: UILabel!
-    @IBOutlet weak var boylamLabel: UILabel!
-    @IBOutlet weak var hizLabel: UILabel!
+    let istek = MKLocalSearch.Request()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    
-    }
-    
-}
-
-
-extension ViewController:CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let sonKonum:CLLocation =  locations[locations.count - 1]
         
-        enlemLabel.text = "Enlem : \(sonKonum.coordinate.latitude)"
-        boylamLabel.text = "Boylam : \(sonKonum.coordinate.longitude)"
-        hizLabel.text = "Hiz :\(sonKonum.speed)"
+        searchBar.delegate = self
+        mapView.delegate = self
         
-        let konum  = CLLocationCoordinate2D(latitude: sonKonum.coordinate.latitude, longitude: sonKonum.coordinate.longitude)
-        let span  = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+        let konum = CLLocationCoordinate2D(latitude: 41.0370014, longitude: 28.9763369)
+        let span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
         let bolge = MKCoordinateRegion(center: konum, span: span)
-        
         mapView.setRegion(bolge, animated: true)
-        mapView.showsUserLocation = true
+        istek.region = mapView.region
+    }
+    
+}
+
+extension ViewController:UISearchBarDelegate,MKMapViewDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        istek.naturalLanguageQuery = searchBar.text!
+        
+        
+        if mapView.annotations.count > 0 {
+            mapView.removeAnnotations(mapView.annotations)
+            
+        }
+        
+        let arama = MKLocalSearch(request: istek)
+        
+        arama.start(completionHandler: {(response,err) in
+            if err != nil {
+                print("Hata")
+            }else if response!.mapItems.count == 0 {
+            print("mekan yok")
+            }else {
+                for mekan in response!.mapItems {
+                    
+                    if let mekanismi = mekan.name,let mekantel = mekan.phoneNumber {
+                        print("Ad \(mekanismi)")
+                        print("Tel\(mekantel)")
+                        print("Enlem: \(mekan.placemark.coordinate.latitude)")
+                        print("Boylam: \(mekan.placemark.coordinate.longitude)")
+                        
+                        let pin = MKPointAnnotation()
+                        pin.coordinate = mekan.placemark.coordinate
+                        pin.title = mekanismi
+                        pin.subtitle = mekantel
+                        
+                        self.mapView.addAnnotation(pin)
+                        
+                    }
+                    
+                }
+                
+            }
+        })
         
     }
+    
+    
 }
+

@@ -17,51 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yha-uk-SwT">
-                                <rect key="frame" x="57" y="625" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4If-LP-2Qf">
-                                <rect key="frame" x="300" y="625" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-b8-dPN">
-                                <rect key="frame" x="25" y="71" width="338" height="440"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="9hC-OJ-uVl">
+                                <rect key="frame" x="0.0" y="52" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tw9-ai-D02"/>
+                                </connections>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-L2-a96">
+                                <rect key="frame" x="0.0" y="108" width="393" height="710"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoB-cZ-4Pt">
-                                <rect key="frame" x="175" y="625" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="EbM-oV-asr"/>
-                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FUj-yO-ZoB"/>
-                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MbK-Sp-r5w"/>
-                            <constraint firstItem="yha-uk-SwT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="NEg-cv-QTD"/>
-                            <constraint firstItem="eoB-cZ-4Pt" firstAttribute="top" secondItem="yha-uk-SwT" secondAttribute="bottom" constant="188" id="QF2-w5-TBM"/>
-                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="SeH-Hs-o4b"/>
-                            <constraint firstItem="4If-LP-2Qf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUL-kq-PiS"/>
-                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XiE-0u-ZHO"/>
-                            <constraint firstItem="eoB-cZ-4Pt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bQc-BD-SNO"/>
-                            <constraint firstItem="yha-uk-SwT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i12-Vy-YSH"/>
-                            <constraint firstItem="4If-LP-2Qf" firstAttribute="top" secondItem="eoB-cZ-4Pt" secondAttribute="bottom" constant="188" id="mpx-HQ-1Za"/>
+                            <constraint firstItem="Jfc-L2-a96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Y0-Mo-Ghx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jfc-L2-a96" secondAttribute="trailing" id="Ku2-2V-1CL"/>
+                            <constraint firstItem="Jfc-L2-a96" firstAttribute="top" secondItem="9hC-OJ-uVl" secondAttribute="bottom" id="MaL-NA-PHj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jfc-L2-a96" secondAttribute="bottom" id="RfL-U4-3yf"/>
+                            <constraint firstItem="9hC-OJ-uVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V9f-e7-htI"/>
+                            <constraint firstItem="9hC-OJ-uVl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="52" id="nUB-a6-zjL"/>
+                            <constraint firstItem="9hC-OJ-uVl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tdE-PO-fOY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="boylamLabel" destination="eoB-cZ-4Pt" id="65N-Sj-75v"/>
-                        <outlet property="enlemLabel" destination="yha-uk-SwT" id="E5U-Cj-Bfh"/>
-                        <outlet property="hizLabel" destination="4If-LP-2Qf" id="LSk-EQ-gfj"/>
-                        <outlet property="mapView" destination="Y0a-b8-dPN" id="Rzp-EI-zCq"/>
-                        <outlet property="viewOfMap" destination="Y0a-b8-dPN" id="Nwj-2h-Ilc"/>
+                        <outlet property="mapView" destination="Jfc-L2-a96" id="ykF-Px-3N3"/>
+                        <outlet property="searchBar" destination="9hC-OJ-uVl" id="msC-yX-FRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
