@@ -17,6 +17,7 @@
 		1168B3832B66CE1700ED3040 /* Core_Location_FrameworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168B3822B66CE1700ED3040 /* Core_Location_FrameworkUITests.swift */; };
 		1168B3852B66CE1700ED3040 /* Core_Location_FrameworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168B3842B66CE1700ED3040 /* Core_Location_FrameworkUITestsLaunchTests.swift */; };
 		1168B3932B66CE6300ED3040 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1168B3922B66CE6300ED3040 /* CoreLocation.framework */; };
+		1168B3952B66DB4C00ED3040 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1168B3942B66DB4C00ED3040 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1168B3822B66CE1700ED3040 /* Core_Location_FrameworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core_Location_FrameworkUITests.swift; sourceTree = "<group>"; };
 		1168B3842B66CE1700ED3040 /* Core_Location_FrameworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core_Location_FrameworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1168B3922B66CE6300ED3040 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1168B3942B66DB4C00ED3040 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168B3952B66DB4C00ED3040 /* MapKit.framework in Frameworks */,
 				1168B3932B66CE6300ED3040 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +137,7 @@
 		1168B3912B66CE6200ED3040 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1168B3942B66DB4C00ED3040 /* MapKit.framework */,
 				1168B3922B66CE6300ED3040 /* CoreLocation.framework */,
 			);
 			name = Frameworks;

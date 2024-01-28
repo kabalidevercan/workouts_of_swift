@@ -12,6 +12,7 @@ import MapKit
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
+ 
     var locationManager:CLLocationManager = CLLocationManager()
     @IBOutlet weak var enlemLabel: UILabel!
     @IBOutlet weak var boylamLabel: UILabel!
@@ -23,13 +24,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        let konum = CLLocationCoordinate2D(latitude: 41.0370014, longitude: 28.9763369)
-        
-        let span  = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-        let bolge = MKCoordinateRegion(center: konum, span: span)
-        mapView.setRegion(bolge, animated: true)
-        
-        
+    
     }
     
 }
@@ -43,6 +38,12 @@ extension ViewController:CLLocationManagerDelegate {
         boylamLabel.text = "Boylam : \(sonKonum.coordinate.longitude)"
         hizLabel.text = "Hiz :\(sonKonum.speed)"
         
+        let konum  = CLLocationCoordinate2D(latitude: sonKonum.coordinate.latitude, longitude: sonKonum.coordinate.longitude)
+        let span  = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+        let bolge = MKCoordinateRegion(center: konum, span: span)
+        
+        mapView.setRegion(bolge, animated: true)
+        mapView.showsUserLocation = true
         
     }
 }

@@ -29,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-b8-dPN">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-b8-dPN">
                                 <rect key="frame" x="25" y="71" width="338" height="440"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
@@ -44,9 +44,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y0a-b8-dPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="EbM-oV-asr"/>
+                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FUj-yO-ZoB"/>
                             <constraint firstItem="Y0a-b8-dPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MbK-Sp-r5w"/>
                             <constraint firstItem="yha-uk-SwT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="NEg-cv-QTD"/>
                             <constraint firstItem="eoB-cZ-4Pt" firstAttribute="top" secondItem="yha-uk-SwT" secondAttribute="bottom" constant="188" id="QF2-w5-TBM"/>
+                            <constraint firstItem="Y0a-b8-dPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="SeH-Hs-o4b"/>
                             <constraint firstItem="4If-LP-2Qf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUL-kq-PiS"/>
                             <constraint firstItem="Y0a-b8-dPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XiE-0u-ZHO"/>
                             <constraint firstItem="eoB-cZ-4Pt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bQc-BD-SNO"/>
@@ -59,11 +61,12 @@
                         <outlet property="enlemLabel" destination="yha-uk-SwT" id="E5U-Cj-Bfh"/>
                         <outlet property="hizLabel" destination="4If-LP-2Qf" id="LSk-EQ-gfj"/>
                         <outlet property="mapView" destination="Y0a-b8-dPN" id="Rzp-EI-zCq"/>
+                        <outlet property="viewOfMap" destination="Y0a-b8-dPN" id="Nwj-2h-Ilc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="-34"/>
+            <point key="canvasLocation" x="184" y="-39"/>
         </scene>
     </scenes>
     <resources>
