@@ -22,6 +22,14 @@ struct ContentView: View {
         return perValue
     }
     
+    var totalAmount : Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = (checkAmount / 100) * tipSelection
+        let totalAmount = checkAmount + tipValue
+        
+        return totalAmount
+    }
+    
     
     var body: some View {
         NavigationStack {
@@ -37,21 +45,25 @@ struct ContentView: View {
                     }
                     .pickerStyle(.navigationLink)
                 }
+                Section("Total Amount"){
+                    Text(totalAmount,format:.currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    
+                }
                 Section("Amount Per Person") {
                     Text(totalPerPerson,format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                    
                 }
+                
                 Section("How much tip do you want to leave? ") {
                     Picker("Tip Percentage: ",selection: $tipPercentage){
-                        ForEach(tipPercentages,id: \.self){
-                            Text($0, format:.percent)
+                        ForEach(0..<101){
+                            Text("\($0)%")
                         }
+                        
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.navigationLink)
                 }
-                Section {
-                    
-                }
+                
+                
             }
                 .navigationTitle("Alman Usulü")
                 .toolbar{
