@@ -9,22 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var useRedText = false
+    
+    var 
+    
+    
+    
     
     var body: some View {
+            
+        var textGirdi : String
+            
         
-            
-        VStack {
-            Text("Test deneme")
-            Text("Test deneme")
-            Text("Test deneme")
-            Text("Test deneme")
-            Text("Test deneme")
-            Text("Test deneme")
-            Text("Test deneme")
-            
-        }
-        .font(.title)
+        
+        Text(textGirdi)
+            .font(.largeTitle)
+            .padding()
+            .foregroundStyle(.white)
+            .background(.blue)
+            .clipShape(.capsule)
             
            
         
