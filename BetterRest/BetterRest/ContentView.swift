@@ -27,20 +27,47 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack {
-            
-            Form{
-                Text("When do you want to wake up ?")
-                    .font(.headline)
-                DatePicker("Please Enter a time", selection: $wakeUp,displayedComponents: .hourAndMinute)
-                    .labelsHidden()
-                VStack(alignment:.leading,spacing: 12){
+            VStack{
+                Section{
+                    DatePicker("Please Enter a time", selection: $wakeUp,displayedComponents: .hourAndMinute)
+                        .labelsHidden()
+                }header: {
+                    Text("When do you want to wake up")
+                        .font(.headline)
+                }
+                .padding()
+                
+                ///////////
+                Section{
+                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount,in: 4...12,step: 0.25)
+                }header: {
                     Text("Desired amount of sleep")
                         .font(.headline)
-                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount,in: 4...12,step: 0.25)
                 }
-                Text("Daily Coffee Intake")
-                    .font(.headline)
-                Stepper("\(coffeeAmount) cup(s)", value: $coffeeAmount,in: 1...20)
+                .padding()
+                //////
+                
+                Section{
+                    
+                    Picker("1 cup",selection: $coffeeAmount){
+                        ForEach(0..<21){
+                            number in
+                            if number <= 1 {
+                                Text("\(number) cup")
+                            }else {
+                                Text("\(number) cups")
+                            }
+                        }
+                    }
+                    
+                }header: {
+                    Text("Daily Coffee Intake")
+                        .font(.headline)
+                }
+                
+                
+                
+                    /////
                 Spacer()
                     
             }
