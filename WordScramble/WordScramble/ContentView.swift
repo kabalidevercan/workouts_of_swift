@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var usedWords = [String]()
+    @State private var rootWord = "test"
+    @State private var newWord = ""
     var body: some View {
-        List{
-            ForEach(0..<5){
-                Text("Data from row of \($0)")
+        NavigationStack{
+            List{
+                Section{
+                    TextField("Enter your word", text: $newWord)
+                }
+                Section{
+                    ForEach(usedWords,id: \.self){ word in
+                        Text(word)
+                        
+                    }
+                }
             }
+            .navigationTitle(rootWord)
         }
+       
     }
 }
 
