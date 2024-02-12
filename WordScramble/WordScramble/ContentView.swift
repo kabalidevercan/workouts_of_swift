@@ -41,6 +41,12 @@ struct ContentView: View {
             }message: {
                 Text(errorMessage)
             }
+            .toolbar{
+                ToolbarItem(placement: .topBarTrailing, content: {
+                    Button("Change"){
+                        startGame()                    }
+                })
+            }
         }
         
     }
@@ -48,7 +54,10 @@ struct ContentView: View {
     func addNewWord(){
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard answer.count > 0 else {return}
+        guard answer.count > 3 else {
+            wordError(title: "Must be more than 3", message:"You cant type less than 3 letters")
+            return
+        }
         
         guard isOriginal(word: answer)else {
             wordError(title: "Word used already", message: "Be more original")
@@ -76,6 +85,11 @@ struct ContentView: View {
     func startGame(){
         if let startWordsUrl = Bundle.main.url(forResource: "start", withExtension: "txt"){
             if let startWords = try? String(contentsOf: startWordsUrl){
+                if(usedWords.count > 0){
+                    withAnimation{
+                        usedWords.removeAll()
+                    }
+                }
                 let allWords = startWords.components(separatedBy: "\n")
                 
                 rootWord = allWords.randomElement() ?? "silkworm"
