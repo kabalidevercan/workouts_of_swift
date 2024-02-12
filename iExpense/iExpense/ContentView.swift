@@ -9,32 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var animasyonMiktari = 1.0
+    @State private var animationAmount = 0.0
     
     
     var body: some View {
-                print(animasyonMiktari)
-       return VStack{
-            Stepper("Scale Amount",value: $animasyonMiktari.animation(
-                .easeInOut(duration: 2)
-                .repeatCount(2,autoreverses: true)
-            ),in: 1...10)
-            Spacer()
-            Button("Tap Me"){
-                animasyonMiktari += 1
-         
+     
+        Button("Tap"){
+            withAnimation(.spring(duration: 1,bounce: 0.5)){
+                animationAmount += 360
             }
-            .padding(40)
-            .background(.red)
-            .foregroundStyle(.white)
-            .clipShape(.circle)
-            .scaleEffect(animasyonMiktari)
-            Spacer()
         }
-            
-        
-        
-          }
+        .padding(90)
+        .background(.purple)
+        .foregroundStyle(.white)
+        .clipShape(.circle)
+        .rotation3DEffect(.degrees(animationAmount), axis: (x:0,y:1,z:0))
+        }
 }
 
 #Preview {
