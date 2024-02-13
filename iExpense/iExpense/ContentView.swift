@@ -8,24 +8,84 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var animationAmount = 0.0
-    
-    
+    @State private var isShowingRed = false
+
     var body: some View {
-     
-        Button("Tap"){
-            withAnimation(.spring(duration: 1,bounce: 0.5)){
-                animationAmount += 360
+        ZStack {
+            if !isShowingRed{
+                Rectangle()
+                    .fill(.blue)
+                    .frame(width: 200, height: 200)
+                    .transition(.pivotComeBack)
+            }
+           
+
+            if isShowingRed {
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 200, height: 200)
+                    .transition(.pivot)
             }
         }
-        .padding(90)
-        .background(.purple)
-        .foregroundStyle(.white)
-        .clipShape(.circle)
-        .rotation3DEffect(.degrees(animationAmount), axis: (x:0,y:1,z:0))
+        .onTapGesture {
+            withAnimation {
+                isShowingRed.toggle()
+            }
         }
+    }
 }
+
+struct CornerRotateModifier:ViewModifier {
+    let amount:Double
+    let anchor:UnitPoint
+    
+    func body(content: Content) -> some View {
+        content
+            .rotationEffect(.degrees(amount),anchor: anchor)
+            .clipped()
+    }
+}
+
+
+struct MyRotateModifier:ViewModifier{
+    let amount:Double
+    let anchor:UnitPoint
+    
+    func body(content: Content) -> some View {
+        content
+            .rotationEffect(.degrees(amount),anchor: anchor)
+            .clipped()
+    }
+    
+}
+
+
+
+
+
+
+extension AnyTransition {
+    static var pivot: AnyTransition {
+        .modifier(
+            active: CornerRotateModifier(amount: -90, anchor: .topLeading),
+            identity: CornerRotateModifier(amount: 0, anchor: .topLeading)
+        )
+    }
+}
+
+
+extension AnyTransition {
+    static var pivotBack:AnyTransition{
+        .modifier(active: CornerRotateModifier(amount: -90, anchor: .topLeading), identity: CornerRotateModifier(amount: 0, anchor: .topLeading))
+    }
+}
+
+extension AnyTransition{
+    static var pivotComeBack:AnyTransition{
+        .modifier(active: CornerRotateModifier(amount: 0, anchor: .center), identity: CornerRotateModifier(amount: -90, anchor: .center))
+    }
+}
+
 
 #Preview {
     ContentView()
