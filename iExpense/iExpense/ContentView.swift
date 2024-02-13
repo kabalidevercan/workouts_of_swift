@@ -7,85 +7,24 @@
 
 import SwiftUI
 
+@Observable
+class User{
+    var firstName = "Ercan"
+    var lastName = "Kabali"
+}
+
 struct ContentView: View {
-    @State private var isShowingRed = false
+    @State private var user = User()
 
     var body: some View {
-        ZStack {
-            if !isShowingRed{
-                Rectangle()
-                    .fill(.blue)
-                    .frame(width: 200, height: 200)
-                    .transition(.pivotComeBack)
-            }
-           
+        VStack {
+            Text("Your name is \(user.firstName) \(user.lastName).")
 
-            if isShowingRed {
-                Rectangle()
-                    .fill(.red)
-                    .frame(width: 200, height: 200)
-                    .transition(.pivot)
-            }
-        }
-        .onTapGesture {
-            withAnimation {
-                isShowingRed.toggle()
-            }
+            TextField("First name", text: $user.firstName)
+            TextField("Last name", text: $user.lastName)
         }
     }
 }
-
-struct CornerRotateModifier:ViewModifier {
-    let amount:Double
-    let anchor:UnitPoint
-    
-    func body(content: Content) -> some View {
-        content
-            .rotationEffect(.degrees(amount),anchor: anchor)
-            .clipped()
-    }
-}
-
-
-struct MyRotateModifier:ViewModifier{
-    let amount:Double
-    let anchor:UnitPoint
-    
-    func body(content: Content) -> some View {
-        content
-            .rotationEffect(.degrees(amount),anchor: anchor)
-            .clipped()
-    }
-    
-}
-
-
-
-
-
-
-extension AnyTransition {
-    static var pivot: AnyTransition {
-        .modifier(
-            active: CornerRotateModifier(amount: -90, anchor: .topLeading),
-            identity: CornerRotateModifier(amount: 0, anchor: .topLeading)
-        )
-    }
-}
-
-
-extension AnyTransition {
-    static var pivotBack:AnyTransition{
-        .modifier(active: CornerRotateModifier(amount: -90, anchor: .topLeading), identity: CornerRotateModifier(amount: 0, anchor: .topLeading))
-    }
-}
-
-extension AnyTransition{
-    static var pivotComeBack:AnyTransition{
-        .modifier(active: CornerRotateModifier(amount: 0, anchor: .center), identity: CornerRotateModifier(amount: -90, anchor: .center))
-    }
-}
-
 
 #Preview {
     ContentView()
