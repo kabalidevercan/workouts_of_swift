@@ -7,23 +7,64 @@
 
 import SwiftUI
 
-@Observable
-class User{
-    var firstName = "Ercan"
-    var lastName = "Kabali"
+
+
+struct SecondView:View{
+    var name:String
+    @Environment(\.dismiss) var dismiss
+    
+    var body:some View{
+        Button("Dismiss"){
+            dismiss()
+        }
+    
+            
+    }
 }
 
+
 struct ContentView: View {
-    @State private var user = User()
+    
+    @State private var numbers = [Int]()
+    @State private var currentNumber = 1
+    
+    func removeRows(at offsets : IndexSet){
+        numbers.remove(atOffsets: offsets)
+    }
 
     var body: some View {
-        VStack {
-            Text("Your name is \(user.firstName) \(user.lastName).")
-
-            TextField("First name", text: $user.firstName)
-            TextField("Last name", text: $user.lastName)
+        NavigationStack{
+            VStack{
+                List{
+                    ForEach(numbers,id: \.self){
+                        Text("Row \($0)")
+                        
+                    }
+                    .onDelete(perform: removeRows)
+                    
+                    
+                }
+                
+                
+                Button("Add Plus Number"){
+                    numbers.append(currentNumber)
+                    currentNumber += 1
+                }
+                
+            }
+            .toolbar{
+                EditButton()
+            }
+            
+            
         }
+        
+
     }
+    
+    
+    
+    
 }
 
 #Preview {
