@@ -7,62 +7,32 @@
 
 import SwiftUI
 
-
-
-struct SecondView:View{
-    var name:String
-    @Environment(\.dismiss) var dismiss
-    
-    var body:some View{
-        Button("Dismiss"){
-            dismiss()
-        }
-    
-            
-    }
-}
-
-
 struct ContentView: View {
+    @State private var expenses = Expenses()
     
-    @State private var numbers = [Int]()
-    @State private var currentNumber = 1
     
-    func removeRows(at offsets : IndexSet){
-        numbers.remove(atOffsets: offsets)
-    }
-
-    var body: some View {
+    var body: some View{
         NavigationStack{
-            VStack{
-                List{
-                    ForEach(numbers,id: \.self){
-                        Text("Row \($0)")
-                        
-                    }
-                    .onDelete(perform: removeRows)
-                    
+            List{
+                ForEach(expenses.items ,id: \.name){item in
+                    Text(item.name)
                     
                 }
-                
-                
-                Button("Add Plus Number"){
-                    numbers.append(currentNumber)
-                    currentNumber += 1
-                }
-                
+                .onDelete(perform: removeExpense)
             }
+            .navigationTitle("iExpense")
             .toolbar{
-                EditButton()
+                Button("Add Expense",systemImage: "plus"){
+                    let expense = ExpenseItem(name: "Test", type: "Personel", amount: 5 )
+                    expenses.items.append(expense )
+                }
             }
-            
-            
         }
-        
-
     }
     
-    
+    func removeExpense (at offSet:IndexSet){
+        expenses.items.remove(atOffsets: offSet )
+    }
     
     
 }
