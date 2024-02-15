@@ -13,24 +13,28 @@ struct ContentView: View {
     
     var body: some View{
         NavigationStack{
-            List{
-                ForEach(expenses.items){item in
-                    Text(item.name)
-                    
+                List{
+                    ForEach(expenses.items){item in
+                        Text(item.name)
+                        
+                    }
+                    .onDelete(perform: removeExpense)
                 }
-                .onDelete(perform: removeExpense)
-            }
-            .navigationTitle("iExpense")
-            .toolbar{
-                Button("Add Expense",systemImage: "plus.app.fill"){
-                    let expense = ExpenseItem(name: "Test", type: "Personel", amount: 5 )
-                    expenses.items.append(expense)
+                .navigationTitle("iExpense")
+                .toolbar{
+                    Button("Add Expense",systemImage: "plus.app.fill"){
+                        let expense = ExpenseItem(name: "Test", type: "Personel", amount: 5 )
+                        expenses.items.append(expense)
+                    }
                 }
-            }
-            .toolbar{
-                EditButton()
-            }
+                .toolbar{
+                    EditButton()
+                }
+                
+            
         }
+      
+      
     }
     
     func removeExpense (at offSet:IndexSet){
