@@ -16,24 +16,33 @@ struct ContentView: View {
         NavigationStack{
                 List{
                     ForEach(expenses.items){item in
-                        Text(item.name)
-                        
+                        HStack {
+                                VStack(alignment: .leading) {
+                                    Text(item.name)
+                                        .font(.headline)
+                                    Text(item.type)
+                                }
+
+                                Spacer()
+                                Text(item.amount, format: .currency(code: "USD"))
+                            }
                     }
                     .onDelete(perform: removeExpense)
                 }
                 .navigationTitle("iExpense")
+                .sheet(isPresented: $showingAddExpense, content: {
+                    AddView(expenses:expenses)
+                })
                 .toolbar{
                     Button("Add Expense",systemImage: "plus.app.fill"){
-                      showingAddExpense =  true
+                        showingAddExpense =  true
                     }
                 }
                 .toolbar{
                     EditButton()
                 }
                 
-                .sheet(isPresented: $showingAddExpense, content: {
-                    AddView(expenses:expenses)
-                })
+                
             
         }
       
