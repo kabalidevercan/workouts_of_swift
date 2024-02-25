@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct ContentView : View{
-    
-   let columns = [
-    GridItem(.adaptive(minimum: 150))
-   ]
-    
-    let astronauts : [String:Astronaut] = Bundle.main.decode("astronauts.json")
-    
+
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
+    let astronauts:[String:Astronaut] = Bundle.main.decode("astronauts.json")
+        
+    let columns = [
+        GridItem(.adaptive(minimum: 150))
+    ]
+    
 
-    
-    
     var body: some View{
         NavigationStack{
             ScrollView{
                 LazyVGrid(columns:columns){
                     ForEach(missions){mission in
                         NavigationLink{
-                            Text("It is showing details right now!!")
+                            MissionView(mission: mission, astronauts: astronauts)
                         }label: {
                             VStack{
                                 Image(mission.image)
@@ -48,8 +46,7 @@ struct ContentView : View{
                                 .background(.lightBackground)
                             }
                             .clipShape(.rect(cornerRadius: 10))
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.lightBackground))
-                            
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.lightBackground,lineWidth:10))
                         }
                     }
                     .padding([.horizontal,.bottom])
@@ -61,6 +58,13 @@ struct ContentView : View{
             .preferredColorScheme(.dark)
         }
     }
+    
+
+    
+
+    
+    
+ 
 }
 
 
@@ -71,3 +75,6 @@ struct ContentView : View{
 
 
 
+/*
+ 
+ */
