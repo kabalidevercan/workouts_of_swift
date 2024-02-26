@@ -41,10 +41,6 @@ struct MissionView: View {
                     .containerRelativeFrame(.horizontal){width,axis in
                         width * 0.5
                     }
-                    
-              
-                
-                
                 VStack(alignment:.leading){
                     Rectangle()
                         .frame(height: 2)
@@ -72,7 +68,8 @@ struct MissionView: View {
                     HStack{
                         ForEach(crew,id: \.role){memberOfCrew in
                             NavigationLink{
-                                Text("Astronaut details will come here")
+                                AstronautView(role: memberOfCrew.role
+                                              , astronaut: memberOfCrew.astronaut)
                             }label: {
                                 HStack{
                                     Image(memberOfCrew.astronaut.id)

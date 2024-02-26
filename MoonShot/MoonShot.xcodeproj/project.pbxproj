@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110880B72B8C57D700462046 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110880B62B8C57D700462046 /* AstronautView.swift */; };
 		110BD86B2B8B316500F1DFF9 /* StrokeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD86A2B8B316500F1DFF9 /* StrokeTest.swift */; };
 		110BD86D2B8B378000F1DFF9 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110BD86C2B8B378000F1DFF9 /* MissionView.swift */; };
 		113949F62B89D8B00098B4DE /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113949F52B89D8B00098B4DE /* Astronaut.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110880B62B8C57D700462046 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 		110BD86A2B8B316500F1DFF9 /* StrokeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeTest.swift; sourceTree = "<group>"; };
 		110BD86C2B8B378000F1DFF9 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		113949F52B89D8B00098B4DE /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				113949FF2B8A896D0098B4DE /* Color-Theme.swift */,
 				1153DE1C2B86391400DB1074 /* ContentView.swift */,
 				110BD86C2B8B378000F1DFF9 /* MissionView.swift */,
+				110880B62B8C57D700462046 /* AstronautView.swift */,
 				113949F72B89DD0F0098B4DE /* Bundle-Decodable.swift */,
 				1153DE1E2B86391500DB1074 /* Assets.xcassets */,
 				1153DE1A2B86391400DB1074 /* MoonShotApp.swift */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				113949F62B89D8B00098B4DE /* Astronaut.swift in Sources */,
+				110880B72B8C57D700462046 /* AstronautView.swift in Sources */,
 				110BD86D2B8B378000F1DFF9 /* MissionView.swift in Sources */,
 				11394A002B8A896D0098B4DE /* Color-Theme.swift in Sources */,
 				1153DE1D2B86391400DB1074 /* ContentView.swift in Sources */,
