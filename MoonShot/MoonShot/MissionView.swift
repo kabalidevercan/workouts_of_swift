@@ -11,37 +11,48 @@ import SwiftUI
 
 struct MissionView: View {
     
-    struct CrewMember{
-        let role:String
-        let astronaut:Astronaut
-    }
     
+    let newObjFromNewReturnStuff:NewReturnStuff
     
-    let mission : Mission
-    let crew:[CrewMember]
     
     init(mission:Mission,astronauts:[String:Astronaut]){
-        self.mission = mission
+        newObjFromNewReturnStuff = NewReturnStuff(mission: mission, astronauts: astronauts)
         
-        self.crew = mission.crew.map{member in
-            if let astronaut = astronauts[member.name]{
-                return CrewMember(role: member.role, astronaut: astronaut)
-            }else {
-                fatalError("Missin \(member.name)")
-            }
-        }
+        
+        
     }
+    
+    
+    /*init(mission:Mission,astronauts:[String:Astronaut]){
+     self.mission = mission
+     
+     self.crew = mission.crew.map{member in
+         if let astronaut = astronauts[member.name]{
+             return CrewMember(role: member.role, astronaut: astronaut)
+         }else {
+             fatalError("Missin \(member.name)")
+         }
+     }
+ }
+     
+     */
+    
+    
+    
     
     var body: some View {
         ScrollView{
             VStack{
-                Image(mission.image)
+                Image(newObjFromNewReturnStuff.getNewMission.image)
                     .resizable()
                     .scaledToFit()
                     .containerRelativeFrame(.horizontal){width,axis in
                         width * 0.5
                     }
                 VStack(alignment:.leading){
+                    Text(newObjFromNewReturnStuff.getNewMission.formattedLaunchDate)
+                        .font(.title.bold())
+                        .padding(.top)
                     Rectangle()
                         .frame(height: 2)
                         .foregroundStyle(.lightBackground)
@@ -51,7 +62,7 @@ struct MissionView: View {
                         .font(.title.italic())
                         .padding(.bottom,5)
                     
-                    Text(mission.description)
+                    Text(newObjFromNewReturnStuff.mission.description)
                     
                     Rectangle()
                         .frame(height: 2)
@@ -63,6 +74,13 @@ struct MissionView: View {
                         .padding(.bottom,5)
                 }
                 .padding(.horizontal)
+                
+                
+                
+                NewReturnScrollView(mission: Mission, astronauts: as)
+                
+                
+                
                 
                 ScrollView(.horizontal,showsIndicators:false){
                     HStack{
@@ -111,7 +129,7 @@ struct MissionView: View {
     let missions:[Mission] = Bundle.main.decode("missions.json")
     let astronauts:[String:Astronaut] = Bundle.main.decode("astronauts.json")
     
-   return  MissionView(mission: missions[0],astronauts: astronauts)
+   return  MissionView(mission: missions[1],astronauts: astronauts)
         .preferredColorScheme(.dark)
             
 }
