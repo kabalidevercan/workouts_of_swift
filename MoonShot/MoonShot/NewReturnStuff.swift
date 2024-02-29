@@ -18,8 +18,8 @@ struct NewReturnStuff {
     }
     
     
-    let mission:Mission
-    let crews:[CrewMember]
+    private let mission:Mission
+   private  let crews:[CrewMember]
     
     init(mission:Mission, astronauts:[String:Astronaut]){
         self.mission = mission

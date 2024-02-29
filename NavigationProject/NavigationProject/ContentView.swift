@@ -7,40 +7,40 @@
 
 import SwiftUI
 
-
-struct TestInHashable : Hashable{
-    let text:String
-    let subtext:String
-    
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(text + subtext)
-    }
-    
-    
-    
-}
-
 struct ContentView: View {
-    
-   let obj1 = TestInHashable(text: "mehmet", subtext: "selman")
-    let obj2 = TestInHashable(text: "mehmet", subtext: "seman")
-    
+    @State private var path = NavigationPath()
+
     var body: some View {
-        NavigationStack{
-            ScrollView{
-                VStack{
-                    Text(obj1.hashValue.description)
-                    Spacer()
-                    Text(obj2.hashValue.description)
-                    
-                }
-                
+        NavigationStack(path: $path) {
+            DetailView(number: 0,path: $path)
+                .navigationDestination(for: Int.self) { i in
+                    DetailView(number:i, path: $path)
             }
         }
     }
 }
 
+struct DetailView: View {
+    var number: Int
+    
+    @Binding var path: NavigationPath
+    
+    var body: some View {
+        NavigationLink("Go to Random Number", value: Int.random(in: 1...1000))
+            .navigationTitle("Number: \(number)")
+            .toolbar{
+                Button("Back Home"){
+                    path = NavigationPath()
+                }
+            }
+            
+    }
+}
+
+
+    
+
+        
 #Preview {
     ContentView()
 }

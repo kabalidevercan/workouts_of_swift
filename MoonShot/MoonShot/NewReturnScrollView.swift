@@ -9,44 +9,61 @@ import SwiftUI
 
 struct NewReturnScrollView: View {
     
+    struct CrewMember{
+        
+        let role:String
+        let astronaut:Astronaut
+    }
+    
+    let crews:[CrewMember]
     
     
-    let newObject:NewReturnStuff
-    
-    init(mission:Mission,astronauts:[String:Astronaut]){
-        
-        newObject = NewReturnStuff(mission: mission, astronauts: astronauts)
-        
-        
+    init(crews:[CrewMember]){
+        self.crews = crews
     }
     
     
-    
-    var body: some View {
-        ScrollView(.horizontal,showsIndicators: false){
+    var body:some View{
+        ScrollView(.horizontal,showsIndicators:false){
             HStack{
-                ForEach(newObject.crews,id:\.role){
-                    newCrew in
+                ForEach(crews,id: \.role){memberOfCrew in
                     NavigationLink{
-                        AstronautView(role: newCrew.role, astronaut: newCrew.astronaut)
+                        AstronautView(role: memberOfCrew.role
+                                      , astronaut: memberOfCrew.astronaut)
                     }label: {
-                        Text("Tap")
+                        HStack{
+                            Image(memberOfCrew.astronaut.id)
+                                .resizable()
+                                .frame(width:104,height: 72)
+                                .clipShape(.capsule)
+                                .overlay(
+                                    Capsule()
+                                        .strokeBorder(.white,lineWidth:1)
+                                )
+                            VStack(alignment:.leading){
+                                Text(memberOfCrew.astronaut.name)
+                                    .foregroundStyle(.white)
+                                    .font(.headline)
+                                    
+                                Text(memberOfCrew.role)
+                                    .foregroundStyle(.gray)
+                            }
+                                
+                        }
+                        .padding(.horizontal)
                     }
-                    
-                    
                 }
             }
         }
-
+        .padding(.bottom)
+        
+        
     }
+    
+    
 }
 
-#Preview {
-    
-    
-    
-    NewReturnScrollView()
-}
+
 
 
 /*

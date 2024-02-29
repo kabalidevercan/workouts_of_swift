@@ -17,9 +17,6 @@ struct MissionView: View {
     
     init(mission:Mission,astronauts:[String:Astronaut]){
         newObjFromNewReturnStuff = NewReturnStuff(mission: mission, astronauts: astronauts)
-        
-        
-        
     }
     
     
@@ -36,10 +33,6 @@ struct MissionView: View {
  }
      
      */
-    
-    
-    
-    
     var body: some View {
         ScrollView{
             VStack{
@@ -62,7 +55,7 @@ struct MissionView: View {
                         .font(.title.italic())
                         .padding(.bottom,5)
                     
-                    Text(newObjFromNewReturnStuff.mission.description)
+                    
                     
                     Rectangle()
                         .frame(height: 2)
@@ -74,51 +67,15 @@ struct MissionView: View {
                         .padding(.bottom,5)
                 }
                 .padding(.horizontal)
+
+                //Crew memberlari gosteren alan
                 
                 
+               
                 
-                NewReturnScrollView(mission: Mission, astronauts: as)
-                
-                
-                
-                
-                ScrollView(.horizontal,showsIndicators:false){
-                    HStack{
-                        ForEach(crew,id: \.role){memberOfCrew in
-                            NavigationLink{
-                                AstronautView(role: memberOfCrew.role
-                                              , astronaut: memberOfCrew.astronaut)
-                            }label: {
-                                HStack{
-                                    Image(memberOfCrew.astronaut.id)
-                                        .resizable()
-                                        .frame(width:104,height: 72)
-                                        .clipShape(.capsule)
-                                        .overlay(
-                                            Capsule()
-                                                .strokeBorder(.white,lineWidth:1)
-                                        )
-                                    VStack(alignment:.leading){
-                                        Text(memberOfCrew.astronaut.name)
-                                            .foregroundStyle(.white)
-                                            .font(.headline)
-                                            
-                                        Text(memberOfCrew.role)
-                                            .foregroundStyle(.gray)
-                                    }
-                                        
-                                }
-                                .padding(.horizontal)
-                            }
-                        }
-                    }
-                }
-                .padding(.bottom)
             }
-            
-         
         }
-        .navigationTitle(mission.displayName)
+        .navigationTitle(newObjFromNewReturnStuff.getNewMission.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .background(.darkBackground)
     }
