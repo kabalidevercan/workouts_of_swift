@@ -7,39 +7,61 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var path = NavigationPath()
 
+struct User:Hashable{
+    let name:String
+    let surname:String
+    let address:String
+    
+    init(name:String,surname:String,address:String){
+        self.name = name
+        self.surname = surname
+        self.address = address
+        
+        print("User class is working")
+        
+    }
+}
+
+
+struct ContentView: View {
+    
+
+    @State private var users = [User]()
+    
+    
     var body: some View {
-        NavigationStack(path: $path) {
-            DetailView(number: 0,path: $path)
-                .navigationDestination(for: Int.self) { i in
-                    DetailView(number:i, path: $path)
+        NavigationStack(path:$users){
+            ScrollView(){
+                Button("Get info for Irem"){
+                    users.append(User(name: "Irem", surname: "Erdem", address: "Turkey"))
+                }
+                .foregroundStyle(.white)
+                .frame(width:200,height: 100)
+                .background(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .padding(.bottom,40)
+                
+                Button("Create a user for Ercan"){
+                    users = [User(name: "Ercan", surname: "Kabali", address: "Turkey")]
+                }
+                .foregroundStyle(.white)
+                .frame(width: 200,height: 100)
+                .background(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .padding(.bottom,40)
+                Button("Get information for A Team"){
+                    users.append(User(name: "Mehmet", surname: "Celi", address: "Turkey"))
+                    users.append(User(name: "Zaara", surname: "Khan", address: "India"))
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .navigationDestination(for: User.self){selectedUser in
+                Text("You are able to see about \(selectedUser.name) \(selectedUser.surname),\(selectedUser.address)")
             }
         }
     }
 }
-
-struct DetailView: View {
-    var number: Int
-    
-    @Binding var path: NavigationPath
-    
-    var body: some View {
-        NavigationLink("Go to Random Number", value: Int.random(in: 1...1000))
-            .navigationTitle("Number: \(number)")
-            .toolbar{
-                Button("Back Home"){
-                    path = NavigationPath()
-                }
-            }
-            
-    }
-}
-
-
-    
-
         
 #Preview {
     ContentView()
