@@ -73,6 +73,7 @@ class StorePath{
         do{
             let data = try JSONEncoder().encode(path)
             try data.write(to: savePath )
+        
             
             
         }catch{
@@ -82,7 +83,51 @@ class StorePath{
     
 }
 
+@Observable
+class NewPathWay{
+    var path:[Int]{
+        didSet{
+            save()
+        }
+    }
+    
+    
+    private let pathWay = URL.documentsDirectory.appending(path:"PathWay")
+    
+    
+    init(){
+        
+        if let data = try? Data(contentsOf: pathWay){
+            if let decodedPath = try? JSONDecoder().decode([Int].self, from: data){
+                path = decodedPath
+                return
+            }
+        }
+        
+        path = []
+    }
+    
+    
+    func save() {
+        do{
+            let data = try JSONEncoder().encode(path)
+            try data.write(to: pathWay)
+            
+        }catch{
+            fatalError("Error in 115.row PathStore")
+        }
+    }
+    
+}
 
+
+
+
+
+
+
+
+/*
 @Observable
 class PathStore{
     
@@ -119,3 +164,4 @@ class PathStore{
     
     
 }
+*/
