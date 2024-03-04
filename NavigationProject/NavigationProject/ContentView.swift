@@ -4,22 +4,26 @@
 
 
 struct ContentView:View {
+    
+    @State private var title = "BSH"
+    
     var body: some View {
         NavigationStack {
             List(0..<100) { i in
                 Text("Row \(i)")
             }
-            .navigationTitle("Title goes here")
+            .navigationTitle($title)
             .navigationBarTitleDisplayMode(.large)
-            .toolbarBackground(.blue)
+            .toolbarBackground(.gray.opacity(0.8))
             .toolbarColorScheme(.dark)
-            .toolbar(.hidden,for: .bottomBar)
             .toolbar{
                 
-                ToolbarItem(placement: .topBarTrailing){
-                    Button("ekle"){
+                ToolbarItemGroup(placement:.topBarTrailing){
+                    Button("Ekle"){
                         
                     }
+                    
+                    Button("Exit"){}
                 }
                 
             }
