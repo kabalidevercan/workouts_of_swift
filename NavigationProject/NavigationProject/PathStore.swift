@@ -48,79 +48,46 @@ class PathStore {
 
 
 @Observable
-class StorePath{
-    var path:[Int]{
+class NavigationPathCodable{
+    
+    var path:NavigationPath{
         didSet{
             save()
         }
     }
     
-    private let savePath = URL.documentsDirectory.appending(path: "SavedPath")
-
-    init() {
-        if let data = try? Data(contentsOf: savePath){
-            if let decoded = try? JSONDecoder().decode([Int].self, from: data){
-                path = decoded
+    
+    private let pathWaySave = URL.documentsDirectory.appending(path: "SavedPath")
+    
+    
+    
+    init(){
+        if let data = try? Data(contentsOf: pathWaySave){
+            if let decoded = try? JSONDecoder().decode(NavigationPath.CodableRepresentation.self, from: data){
+                path =  NavigationPath(decoded)
                 return
             }
         }
         
-        path = []
+        path = NavigationPath()
     }
     
     
     func save(){
-        do{
-            let data = try JSONEncoder().encode(path)
-            try data.write(to: savePath )
+        guard let representation = path.codable else {return}
         
-            
+        do{
+            let data = try JSONEncoder().encode(representation)
+            try data.write(to: pathWaySave)
             
         }catch{
-            fatalError("Failed to save navigation Data")
-        }
-    }
-    
-}
-
-@Observable
-class NewPathWay{
-    var path:[Int]{
-        didSet{
-            save()
-        }
-    }
-    
-    
-    private let pathWay = URL.documentsDirectory.appending(path:"PathWay")
-    
-    
-    init(){
-        
-        if let data = try? Data(contentsOf: pathWay){
-            if let decodedPath = try? JSONDecoder().decode([Int].self, from: data){
-                path = decodedPath
-                return
-            }
+            fatalError("Error in 82 in PathStore.swift package")
         }
         
-        path = []
     }
     
-    
-    func save() {
-        do{
-            let data = try JSONEncoder().encode(path)
-            try data.write(to: pathWay)
-            
-        }catch{
-            fatalError("Error in 115.row PathStore")
-        }
-    }
     
 }
-
-
 
 
 
