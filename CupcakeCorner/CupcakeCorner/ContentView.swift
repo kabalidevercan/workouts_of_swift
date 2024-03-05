@@ -8,45 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var results  = [Result]()
+    
+    @State private var order = Order()
+    
     
     var body: some View {
-        List(results,id:\.trackId){item in
-            VStack(alignment:.leading){
-                Text(item.trackName)
-                    .font(.headline)
-                Text(item.collectionName)
+        Form{
+            Section{
+                Picker("Select your cake type",selection: $order.type){
+                    ForEach(Order.types.indices,id: \.self){
+                        Text(Order.types[$0])
+                    }
+                }
+                
+                Stepper("Number of cakes: \(order.quantity)",value: $order.quantity,in:3...20)
+            }
+            Section{
+                Toggle("Any special requests?",isOn: $order.speacialRequestEnabled)
+                
+                if order.speacialRequestEnabled {
+                    Toggle("Add extra frosting",isOn: $order.extraFrosting)
+                    Toggle("Add extra sprinkles",isOn: $order.addSprinkles)
+                }
             }
             
-        }
-        .task{
-            await loadData()
-        }
-        
-        
-    }
-    
-    func loadData() async {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else {
-            print("Invalid URL")
-            return
-        }
-        
-        do{
-            let (data,_) =  try await URLSession.shared.data(from: url)
-            
-            if let decodedResponse = try? JSONDecoder().decode(Response.self, from: data){
-                results = decodedResponse.results
+            Section{
+                NavigationLink("Delivery Details"){
+                    AddressView(order: order)
+                }
             }
-            
-            
-        }catch{
-            print("Error 39.row in ContentView")
         }
-        
-        
+        .navigationTitle("Cupcake Corner")
     }
-    
     
 }
 
