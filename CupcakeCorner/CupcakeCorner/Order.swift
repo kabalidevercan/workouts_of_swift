@@ -10,7 +10,7 @@ import SwiftUI
 
 
 @Observable
-class Order{
+class Order:Codable{
     static let types = ["Vanilla","Strawberry","Chocolate","Rainbows"]
     
     var type = 0
