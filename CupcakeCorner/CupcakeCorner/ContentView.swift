@@ -37,7 +37,7 @@ struct ContentView : View{
                 }
                 
             }
-            .navigationTitle("Get a Cup Cake")
+            .navigationTitle("Get Cupcake")
         }
     }
 }
