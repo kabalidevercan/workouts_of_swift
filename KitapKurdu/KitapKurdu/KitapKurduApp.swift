@@ -8,13 +8,13 @@
 import SwiftUI
 import SwiftData
 
-
 @main
 struct KitapKurduApp: App {
     var body: some Scene {
         WindowGroup {
-            Page2()
+            ContentView()
         }
-        .modelContainer(for:Student.self)
+        .modelContainer(for: Book.self)
+        
     }
 }

@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1100135C2B9F790B00D0280C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100135B2B9F790B00D0280C /* Book.swift */; };
+		1100135E2B9F816500D0280C /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100135D2B9F816500D0280C /* AddBookView.swift */; };
+		110013602B9F94EB00D0280C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100135F2B9F94EB00D0280C /* RatingView.swift */; };
 		113B7A452B9E4EEB00B1EDA9 /* KitapKurduApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113B7A442B9E4EEB00B1EDA9 /* KitapKurduApp.swift */; };
 		113B7A472B9E4EEB00B1EDA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113B7A462B9E4EEB00B1EDA9 /* ContentView.swift */; };
 		113B7A492B9E4EEC00B1EDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113B7A482B9E4EEC00B1EDA9 /* Assets.xcassets */; };
 		113B7A4C2B9E4EEC00B1EDA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113B7A4B2B9E4EEC00B1EDA9 /* Preview Assets.xcassets */; };
-		11E7661F2B9EF39A00A9B4A5 /* Page2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7661E2B9EF39A00A9B4A5 /* Page2.swift */; };
-		11E766212B9EF6E100A9B4A5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E766202B9EF6E100A9B4A5 /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1100135B2B9F790B00D0280C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1100135D2B9F816500D0280C /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		1100135F2B9F94EB00D0280C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		113B7A412B9E4EEB00B1EDA9 /* KitapKurdu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitapKurdu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113B7A442B9E4EEB00B1EDA9 /* KitapKurduApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitapKurduApp.swift; sourceTree = "<group>"; };
 		113B7A462B9E4EEB00B1EDA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		113B7A482B9E4EEC00B1EDA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113B7A4B2B9E4EEC00B1EDA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		11E7661E2B9EF39A00A9B4A5 /* Page2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2.swift; sourceTree = "<group>"; };
-		11E766202B9EF6E100A9B4A5 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				113B7A442B9E4EEB00B1EDA9 /* KitapKurduApp.swift */,
-				11E7661E2B9EF39A00A9B4A5 /* Page2.swift */,
-				11E766202B9EF6E100A9B4A5 /* Student.swift */,
+				1100135D2B9F816500D0280C /* AddBookView.swift */,
 				113B7A462B9E4EEB00B1EDA9 /* ContentView.swift */,
+				1100135F2B9F94EB00D0280C /* RatingView.swift */,
+				1100135B2B9F790B00D0280C /* Book.swift */,
 				113B7A482B9E4EEC00B1EDA9 /* Assets.xcassets */,
 				113B7A4A2B9E4EEC00B1EDA9 /* Preview Content */,
 			);
@@ -143,10 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1100135C2B9F790B00D0280C /* Book.swift in Sources */,
 				113B7A472B9E4EEB00B1EDA9 /* ContentView.swift in Sources */,
 				113B7A452B9E4EEB00B1EDA9 /* KitapKurduApp.swift in Sources */,
-				11E7661F2B9EF39A00A9B4A5 /* Page2.swift in Sources */,
-				11E766212B9EF6E100A9B4A5 /* Student.swift in Sources */,
+				110013602B9F94EB00D0280C /* RatingView.swift in Sources */,
+				1100135E2B9F816500D0280C /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
