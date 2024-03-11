@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 @main
 struct KitapKurduApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Page2()
         }
+        .modelContainer(for:Student.self)
     }
 }
