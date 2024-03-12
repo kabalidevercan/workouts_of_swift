@@ -14,6 +14,9 @@
 		113B7A472B9E4EEB00B1EDA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113B7A462B9E4EEB00B1EDA9 /* ContentView.swift */; };
 		113B7A492B9E4EEC00B1EDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113B7A482B9E4EEC00B1EDA9 /* Assets.xcassets */; };
 		113B7A4C2B9E4EEC00B1EDA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113B7A4B2B9E4EEC00B1EDA9 /* Preview Assets.xcassets */; };
+		1192F7C92BA03D2F00CDA134 /* SmileViewRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7C82BA03D2F00CDA134 /* SmileViewRating.swift */; };
+		1192F7CB2BA0443500CDA134 /* EmojiRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7CA2BA0443500CDA134 /* EmojiRating.swift */; };
+		1192F7CD2BA06AE100CDA134 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7CC2BA06AE100CDA134 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		113B7A462B9E4EEB00B1EDA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		113B7A482B9E4EEC00B1EDA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113B7A4B2B9E4EEC00B1EDA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1192F7C82BA03D2F00CDA134 /* SmileViewRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileViewRating.swift; sourceTree = "<group>"; };
+		1192F7CA2BA0443500CDA134 /* EmojiRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRating.swift; sourceTree = "<group>"; };
+		1192F7CC2BA06AE100CDA134 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,10 @@
 				113B7A442B9E4EEB00B1EDA9 /* KitapKurduApp.swift */,
 				1100135D2B9F816500D0280C /* AddBookView.swift */,
 				113B7A462B9E4EEB00B1EDA9 /* ContentView.swift */,
+				1192F7CC2BA06AE100CDA134 /* DetailView.swift */,
+				1192F7CA2BA0443500CDA134 /* EmojiRating.swift */,
 				1100135F2B9F94EB00D0280C /* RatingView.swift */,
+				1192F7C82BA03D2F00CDA134 /* SmileViewRating.swift */,
 				1100135B2B9F790B00D0280C /* Book.swift */,
 				113B7A482B9E4EEC00B1EDA9 /* Assets.xcassets */,
 				113B7A4A2B9E4EEC00B1EDA9 /* Preview Content */,
@@ -146,6 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1192F7CB2BA0443500CDA134 /* EmojiRating.swift in Sources */,
+				1192F7CD2BA06AE100CDA134 /* DetailView.swift in Sources */,
+				1192F7C92BA03D2F00CDA134 /* SmileViewRating.swift in Sources */,
 				1100135C2B9F790B00D0280C /* Book.swift in Sources */,
 				113B7A472B9E4EEB00B1EDA9 /* ContentView.swift in Sources */,
 				113B7A452B9E4EEB00B1EDA9 /* KitapKurduApp.swift in Sources */,
