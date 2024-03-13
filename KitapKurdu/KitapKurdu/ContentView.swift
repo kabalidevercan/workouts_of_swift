@@ -24,7 +24,8 @@ struct ContentView: View {
                 ForEach(books){book in
                     NavigationLink(value: book){
                         HStack{
-                            EmojiRating(number: book.rating)
+                                //emojirating sayfasi buraya gelecek
+                            NewEmojiRatingView(rating: book.rating)
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading){
@@ -43,27 +44,29 @@ struct ContentView: View {
             .navigationDestination(for: Book.self){book in
                     DetailView(book: book)
             }
-            
-            
-                .navigationTitle("Kitap Kurdu")
-                .toolbar{
+            .navigationTitle("Kitap Kurdu")
+            .toolbar{
                     ToolbarItem(placement: .topBarTrailing){
                         Button("Add Book",systemImage: "plus"){
                             showingAddScreen.toggle()
                         }
                     }
+                    /*
                     ToolbarItem(placement: .topBarTrailing){
                         Button("Add Smile", systemImage:"plus"){
                             showingSecondScreen.toggle()
                         }
                     }
+                     */
                 }
                 .sheet(isPresented: $showingAddScreen, content: {
                     AddBookView()
                 })
+            /*
                 .sheet(isPresented: $showingSecondScreen){
                     SmileViewRating(rate: $number)
                 }
+             */
         }
         
     }
