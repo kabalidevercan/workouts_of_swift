@@ -48,14 +48,15 @@ struct DetailView: View {
 
 
 #Preview {
-    do {
+    do{
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: Book.self, configurations: config)
-        let example = Book(title: "Test Book", author: "Test Author", genre: "Fantasy", review: "This was a great book; I really enjoyed it.", rating: 4)
-
+        let modelContainer = try ModelContainer(for: Book.self, configurations: config)
+        let example =  Book(title: "Nasrettin", author: "Ercan", genre: "Horror", review: "this was great a book that is first time in my life", rating: 3)
+        
         return DetailView(book: example)
-            .modelContainer(container)
-    } catch {
-        return Text("Failed to create preview: \(error.localizedDescription)")
+            .modelContainer(modelContainer)
+        
+    }catch{
+        return Text("Failed to preview on \(error.localizedDescription)")
     }
 }
