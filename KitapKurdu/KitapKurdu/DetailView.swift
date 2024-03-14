@@ -21,6 +21,14 @@ struct DetailView: View {
         dismiss()
     }
     
+    func SetDate(date:Date) -> String{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        
+        return formatter.string(from: date)
+    }
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
@@ -46,6 +54,9 @@ struct DetailView: View {
 
             RatingView(rating: .constant(book.rating))
                 .font(.largeTitle)
+            
+           //Text("Published Date:\(SetDate(date:book.publishDate))")
+              // .padding(.top,20)
                 
         }
         .toolbar{
@@ -55,11 +66,11 @@ struct DetailView: View {
                 }
             }
         }
-        .alert("Delete Book", isPresented: $showingAlertMessage){
+        .alert("Delete Book",isPresented: $showingAlertMessage){
             Button("Delete",role: .destructive,action: deleteBook)
-            Button("Cancel",role: .cancel){}
+            Button("Cancel",role: .cancel,action: {})
         }message: {
-            Text("Are you sure?")
+            Text("Are you sure deleting this book")
         }
         .navigationTitle(book.title)
         .navigationBarTitleDisplayMode(.inline)

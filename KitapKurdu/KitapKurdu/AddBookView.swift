@@ -17,9 +17,10 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = "Fantasy"
     @State private var review = ""
+    
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     @Environment(\.dismiss) var dismiss
-    
+    @State private var showAlertText = false
     
     
     var body: some View {
@@ -43,15 +44,29 @@ struct AddBookView: View {
 
                 Section {
                     Button("Save") {
+                        
+                        if title.isEmpty || author.isEmpty || genre.isEmpty {
+                            showAlertText = true
+                        }else{
+                            dismiss()
+                        }
+                        
                         let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
                         contextOfModel.insert(newBook)
-                        dismiss()
                         // add the book
                     }
                 }
             }
+            .alert("ALERT",isPresented:$showAlertText){
+                Button("Cancel",role:.cancel,action: {
+                   
+                })
+            }message: {
+                Text("You must to fill all blanks")
+            }
             .navigationTitle("Add Book")
         }
+        
     }
 }
 

@@ -16,7 +16,6 @@ struct ContentView: View {
         SortDescriptor(\Book.author,order: .reverse)
     ]) var books : [Book]
     @State private var number = 4
-    
     @State private var showingAddScreen = false
     @State private var showingSecondScreen = false
     
@@ -40,8 +39,15 @@ struct ContentView: View {
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading){
-                                Text(book.title)
-                                    .font(.headline)
+                                if book.rating == 1 {
+                                    Text(book.title)
+                                        .foregroundStyle(.red)
+                                        .font(.headline)
+                                }else{
+                                    Text(book.title)
+                                        .font(.headline)
+                                }
+                                
                                 Text(book.author)
                                     .foregroundStyle(.secondary)
                             }
