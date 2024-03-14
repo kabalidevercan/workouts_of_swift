@@ -15,6 +15,6 @@ struct KitapKurduApp: App {
             ContentView()
         }
         .modelContainer(for: Book.self)
-        
     }
+    
 }
