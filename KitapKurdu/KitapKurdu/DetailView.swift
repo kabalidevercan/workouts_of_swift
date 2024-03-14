@@ -10,8 +10,16 @@ import SwiftData
 
 
 struct DetailView: View {
+    @Environment(\.modelContext) var contextOfModel
+    @Environment(\.dismiss) var dismiss
+    @State private var showingAlertMessage = false
     
     let book:Book
+    
+    func deleteBook(){
+        contextOfModel.delete(book)
+        dismiss()
+    }
     
     var body: some View {
         ScrollView {
@@ -38,6 +46,20 @@ struct DetailView: View {
 
             RatingView(rating: .constant(book.rating))
                 .font(.largeTitle)
+                
+        }
+        .toolbar{
+            ToolbarItem(placement:.topBarTrailing){
+                Button("Delete this book",systemImage: "trash"){
+                    showingAlertMessage = true
+                }
+            }
+        }
+        .alert("Delete Book", isPresented: $showingAlertMessage){
+            Button("Delete",role: .destructive,action: deleteBook)
+            Button("Cancel",role: .cancel){}
+        }message: {
+            Text("Are you sure?")
         }
         .navigationTitle(book.title)
         .navigationBarTitleDisplayMode(.inline)
