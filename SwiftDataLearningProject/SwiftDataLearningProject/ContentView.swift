@@ -6,43 +6,52 @@
 //
 
 import SwiftUI
+import SplineRuntime
 
 struct ContentView: View {
-    @State var viewModel = AnaSayfaViewModel()
-    
-    @State private var textField1 = ""
-    @State private var textField2 = ""
-    
-    
     
     var body: some View {
-        VStack(spacing:50){
-            VStack(spacing:20){
-                TextField("number1: ",text: $textField1).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-                TextField("number2: ",text: $textField2).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-            }
-            HStack(spacing:20){
-                Button("Topla"){
-                    viewModel.toplam(number1: Int(textField1), number2: Int(textField2))
-                }
-                Button("Carp"){
-                    viewModel.carp(number1: Int(textField1), number2: Int(textField2))
-                }
-            }
-            ZStack{
-                
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
-                    .frame(width: 200,height: 100)
-                    
-                Text("Sonuc:\(viewModel.sonuc)")
-            }
-            
+        
+        VStack{
+                Rectangle()
+                .frame(height: 500)
+                .ignoresSafeArea()
         }
+        VStack(spacing:12){
+            Text("Build Your Brand")
+                .font(.title.bold())
+            Text("Stay up to date with all your social media platforms in one simple app.")
+        }
+        .padding(.horizontal)
+        
+        Spacer()
+        
+        Button("Get Started"){
+            //BUTTON ACTION CODE GOES HERE
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(.pink)
+        
+        Spacer()
+    
     }
 }
 
 #Preview {
     ContentView()
-        .preferredColorScheme(.dark)
+        
+}
+
+
+struct Onboard3DView:View{
+    var body: some View{
+
+        // fetching from cloud
+        let url = URL(string: "https://build.spline.design/gXANx0NEHXsi2H5zc4l5/scene.splineswift")!
+
+        // // fetching from local
+        // let url = Bundle.main.url(forResource: "scene", withExtension: "splineswift")!
+
+        try? SplineView(sceneFileURL: url)
+    }
 }

@@ -7,118 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11160D432BA5864300AF0316 /* MVVMtrainings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11160D422BA5864300AF0316 /* MVVMtrainings.swift */; };
-		115902DB2BA5E4D300B8ED05 /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 115902DA2BA5E4D300B8ED05 /* SplineRuntime */; };
-		1192F7E12BA398A400CDA134 /* SwiftDataLearningProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */; };
-		1192F7E32BA398A400CDA134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7E22BA398A400CDA134 /* ContentView.swift */; };
-		1192F7E52BA398A500CDA134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1192F7E42BA398A500CDA134 /* Assets.xcassets */; };
-		1192F7E82BA398A500CDA134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1192F7E72BA398A500CDA134 /* Preview Assets.xcassets */; };
+		1159032A2BA5F14600B8ED05 /* CoverAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115903292BA5F14600B8ED05 /* CoverAppApp.swift */; };
+		1159032C2BA5F14600B8ED05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1159032B2BA5F14600B8ED05 /* ContentView.swift */; };
+		1159032E2BA5F14700B8ED05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1159032D2BA5F14700B8ED05 /* Assets.xcassets */; };
+		115903312BA5F14700B8ED05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115903302BA5F14700B8ED05 /* Preview Assets.xcassets */; };
+		115903392BA5F16A00B8ED05 /* CoverFlowUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115903382BA5F16A00B8ED05 /* CoverFlowUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11160D422BA5864300AF0316 /* MVVMtrainings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMtrainings.swift; sourceTree = "<group>"; };
-		1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataLearningProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataLearningProjectApp.swift; sourceTree = "<group>"; };
-		1192F7E22BA398A400CDA134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1192F7E42BA398A500CDA134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1192F7E72BA398A500CDA134 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		115903262BA5F14600B8ED05 /* CoverApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoverApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		115903292BA5F14600B8ED05 /* CoverAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverAppApp.swift; sourceTree = "<group>"; };
+		1159032B2BA5F14600B8ED05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1159032D2BA5F14700B8ED05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		115903302BA5F14700B8ED05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		115903382BA5F16A00B8ED05 /* CoverFlowUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1192F7DA2BA398A400CDA134 /* Frameworks */ = {
+		115903232BA5F14600B8ED05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115902DB2BA5E4D300B8ED05 /* SplineRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		115902D72BA5E41400B8ED05 /* Frameworks */ = {
+		1159031D2BA5F14600B8ED05 = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1192F7D42BA398A400CDA134 = {
-			isa = PBXGroup;
-			children = (
-				1192F7DF2BA398A400CDA134 /* SwiftDataLearningProject */,
-				1192F7DE2BA398A400CDA134 /* Products */,
-				115902D72BA5E41400B8ED05 /* Frameworks */,
+				115903282BA5F14600B8ED05 /* CoverApp */,
+				115903272BA5F14600B8ED05 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1192F7DE2BA398A400CDA134 /* Products */ = {
+		115903272BA5F14600B8ED05 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */,
+				115903262BA5F14600B8ED05 /* CoverApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1192F7DF2BA398A400CDA134 /* SwiftDataLearningProject */ = {
+		115903282BA5F14600B8ED05 /* CoverApp */ = {
 			isa = PBXGroup;
 			children = (
-				1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */,
-				1192F7E22BA398A400CDA134 /* ContentView.swift */,
-				11160D422BA5864300AF0316 /* MVVMtrainings.swift */,
-				1192F7E42BA398A500CDA134 /* Assets.xcassets */,
-				1192F7E62BA398A500CDA134 /* Preview Content */,
+				115903372BA5F15600B8ED05 /* Helpers */,
+				1159032B2BA5F14600B8ED05 /* ContentView.swift */,
+				115903292BA5F14600B8ED05 /* CoverAppApp.swift */,
+				1159032D2BA5F14700B8ED05 /* Assets.xcassets */,
+				1159032F2BA5F14700B8ED05 /* Preview Content */,
 			);
-			path = SwiftDataLearningProject;
+			path = CoverApp;
 			sourceTree = "<group>";
 		};
-		1192F7E62BA398A500CDA134 /* Preview Content */ = {
+		1159032F2BA5F14700B8ED05 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				1192F7E72BA398A500CDA134 /* Preview Assets.xcassets */,
+				115903302BA5F14700B8ED05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		115903372BA5F15600B8ED05 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				115903382BA5F16A00B8ED05 /* CoverFlowUI.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1192F7DC2BA398A400CDA134 /* SwiftDataLearningProject */ = {
+		115903252BA5F14600B8ED05 /* CoverApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1192F7EB2BA398A500CDA134 /* Build configuration list for PBXNativeTarget "SwiftDataLearningProject" */;
+			buildConfigurationList = 115903342BA5F14700B8ED05 /* Build configuration list for PBXNativeTarget "CoverApp" */;
 			buildPhases = (
-				1192F7D92BA398A400CDA134 /* Sources */,
-				1192F7DA2BA398A400CDA134 /* Frameworks */,
-				1192F7DB2BA398A400CDA134 /* Resources */,
+				115903222BA5F14600B8ED05 /* Sources */,
+				115903232BA5F14600B8ED05 /* Frameworks */,
+				115903242BA5F14600B8ED05 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftDataLearningProject;
-			packageProductDependencies = (
-				115902DA2BA5E4D300B8ED05 /* SplineRuntime */,
-			);
-			productName = SwiftDataLearningProject;
-			productReference = 1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */;
+			name = CoverApp;
+			productName = CoverApp;
+			productReference = 115903262BA5F14600B8ED05 /* CoverApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1192F7D52BA398A400CDA134 /* Project object */ = {
+		1159031E2BA5F14600B8ED05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					1192F7DC2BA398A400CDA134 = {
+					115903252BA5F14600B8ED05 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 1192F7D82BA398A400CDA134 /* Build configuration list for PBXProject "SwiftDataLearningProject" */;
+			buildConfigurationList = 115903212BA5F14600B8ED05 /* Build configuration list for PBXProject "CoverApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,46 +121,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 1192F7D42BA398A400CDA134;
-			packageReferences = (
-				115902D92BA5E4D300B8ED05 /* XCRemoteSwiftPackageReference "spline-ios" */,
-			);
-			productRefGroup = 1192F7DE2BA398A400CDA134 /* Products */;
+			mainGroup = 1159031D2BA5F14600B8ED05;
+			productRefGroup = 115903272BA5F14600B8ED05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1192F7DC2BA398A400CDA134 /* SwiftDataLearningProject */,
+				115903252BA5F14600B8ED05 /* CoverApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1192F7DB2BA398A400CDA134 /* Resources */ = {
+		115903242BA5F14600B8ED05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1192F7E82BA398A500CDA134 /* Preview Assets.xcassets in Resources */,
-				1192F7E52BA398A500CDA134 /* Assets.xcassets in Resources */,
+				115903312BA5F14700B8ED05 /* Preview Assets.xcassets in Resources */,
+				1159032E2BA5F14700B8ED05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1192F7D92BA398A400CDA134 /* Sources */ = {
+		115903222BA5F14600B8ED05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1192F7E32BA398A400CDA134 /* ContentView.swift in Sources */,
-				11160D432BA5864300AF0316 /* MVVMtrainings.swift in Sources */,
-				1192F7E12BA398A400CDA134 /* SwiftDataLearningProjectApp.swift in Sources */,
+				1159032C2BA5F14600B8ED05 /* ContentView.swift in Sources */,
+				115903392BA5F16A00B8ED05 /* CoverFlowUI.swift in Sources */,
+				1159032A2BA5F14600B8ED05 /* CoverAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1192F7E92BA398A500CDA134 /* Debug */ = {
+		115903322BA5F14700B8ED05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		1192F7EA2BA398A500CDA134 /* Release */ = {
+		115903332BA5F14700B8ED05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,17 +276,16 @@
 			};
 			name = Release;
 		};
-		1192F7EC2BA398A500CDA134 /* Debug */ = {
+		115903352BA5F14700B8ED05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataLearningProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CoverApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftDataLearningProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,7 +296,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.SwiftDataLearningProject;
+				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.CoverApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,17 +304,16 @@
 			};
 			name = Debug;
 		};
-		1192F7ED2BA398A500CDA134 /* Release */ = {
+		115903362BA5F14700B8ED05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataLearningProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CoverApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftDataLearningProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -334,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.SwiftDataLearningProject;
+				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.CoverApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,44 +335,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1192F7D82BA398A400CDA134 /* Build configuration list for PBXProject "SwiftDataLearningProject" */ = {
+		115903212BA5F14600B8ED05 /* Build configuration list for PBXProject "CoverApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1192F7E92BA398A500CDA134 /* Debug */,
-				1192F7EA2BA398A500CDA134 /* Release */,
+				115903322BA5F14700B8ED05 /* Debug */,
+				115903332BA5F14700B8ED05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1192F7EB2BA398A500CDA134 /* Build configuration list for PBXNativeTarget "SwiftDataLearningProject" */ = {
+		115903342BA5F14700B8ED05 /* Build configuration list for PBXNativeTarget "CoverApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1192F7EC2BA398A500CDA134 /* Debug */,
-				1192F7ED2BA398A500CDA134 /* Release */,
+				115903352BA5F14700B8ED05 /* Debug */,
+				115903362BA5F14700B8ED05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		115902D92BA5E4D300B8ED05 /* XCRemoteSwiftPackageReference "spline-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/splinetool/spline-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		115902DA2BA5E4D300B8ED05 /* SplineRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 115902D92BA5E4D300B8ED05 /* XCRemoteSwiftPackageReference "spline-ios" */;
-			productName = SplineRuntime;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1192F7D52BA398A400CDA134 /* Project object */;
+	rootObject = 1159031E2BA5F14600B8ED05 /* Project object */;
 }
