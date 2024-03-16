@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11160D432BA5864300AF0316 /* MVVMtrainings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11160D422BA5864300AF0316 /* MVVMtrainings.swift */; };
 		1192F7E12BA398A400CDA134 /* SwiftDataLearningProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */; };
 		1192F7E32BA398A400CDA134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7E22BA398A400CDA134 /* ContentView.swift */; };
 		1192F7E52BA398A500CDA134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1192F7E42BA398A500CDA134 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11160D422BA5864300AF0316 /* MVVMtrainings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMtrainings.swift; sourceTree = "<group>"; };
 		1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataLearningProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataLearningProjectApp.swift; sourceTree = "<group>"; };
 		1192F7E22BA398A400CDA134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */,
 				1192F7E22BA398A400CDA134 /* ContentView.swift */,
+				11160D422BA5864300AF0316 /* MVVMtrainings.swift */,
 				1192F7E42BA398A500CDA134 /* Assets.xcassets */,
 				1192F7E62BA398A500CDA134 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1192F7E32BA398A400CDA134 /* ContentView.swift in Sources */,
+				11160D432BA5864300AF0316 /* MVVMtrainings.swift in Sources */,
 				1192F7E12BA398A400CDA134 /* SwiftDataLearningProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
