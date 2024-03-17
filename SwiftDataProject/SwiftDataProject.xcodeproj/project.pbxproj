@@ -7,75 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11160D432BA5864300AF0316 /* MVVMtrainings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11160D422BA5864300AF0316 /* MVVMtrainings.swift */; };
-		115902DB2BA5E4D300B8ED05 /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 115902DA2BA5E4D300B8ED05 /* SplineRuntime */; };
-		1192F7E12BA398A400CDA134 /* SwiftDataLearningProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */; };
-		1192F7E32BA398A400CDA134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192F7E22BA398A400CDA134 /* ContentView.swift */; };
-		1192F7E52BA398A500CDA134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1192F7E42BA398A500CDA134 /* Assets.xcassets */; };
-		1192F7E82BA398A500CDA134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1192F7E72BA398A500CDA134 /* Preview Assets.xcassets */; };
+		112C846F2BA6FAF90040F59C /* SwiftDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C846E2BA6FAF90040F59C /* SwiftDataProjectApp.swift */; };
+		112C84712BA6FAF90040F59C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C84702BA6FAF90040F59C /* ContentView.swift */; };
+		112C84732BA6FAFB0040F59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112C84722BA6FAFB0040F59C /* Assets.xcassets */; };
+		112C84762BA6FAFB0040F59C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112C84752BA6FAFB0040F59C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11160D422BA5864300AF0316 /* MVVMtrainings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMtrainings.swift; sourceTree = "<group>"; };
-		1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataLearningProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataLearningProjectApp.swift; sourceTree = "<group>"; };
-		1192F7E22BA398A400CDA134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1192F7E42BA398A500CDA134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1192F7E72BA398A500CDA134 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		112C846B2BA6FAF90040F59C /* SwiftDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		112C846E2BA6FAF90040F59C /* SwiftDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataProjectApp.swift; sourceTree = "<group>"; };
+		112C84702BA6FAF90040F59C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		112C84722BA6FAFB0040F59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		112C84752BA6FAFB0040F59C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1192F7DA2BA398A400CDA134 /* Frameworks */ = {
+		112C84682BA6FAF90040F59C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115902DB2BA5E4D300B8ED05 /* SplineRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		115902D72BA5E41400B8ED05 /* Frameworks */ = {
+		112C84622BA6FAF90040F59C = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1192F7D42BA398A400CDA134 = {
-			isa = PBXGroup;
-			children = (
-				1192F7DF2BA398A400CDA134 /* SwiftDataLearningProject */,
-				1192F7DE2BA398A400CDA134 /* Products */,
-				115902D72BA5E41400B8ED05 /* Frameworks */,
+				112C846D2BA6FAF90040F59C /* SwiftDataProject */,
+				112C846C2BA6FAF90040F59C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1192F7DE2BA398A400CDA134 /* Products */ = {
+		112C846C2BA6FAF90040F59C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */,
+				112C846B2BA6FAF90040F59C /* SwiftDataProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1192F7DF2BA398A400CDA134 /* SwiftDataLearningProject */ = {
+		112C846D2BA6FAF90040F59C /* SwiftDataProject */ = {
 			isa = PBXGroup;
 			children = (
-				1192F7E02BA398A400CDA134 /* SwiftDataLearningProjectApp.swift */,
-				1192F7E22BA398A400CDA134 /* ContentView.swift */,
-				11160D422BA5864300AF0316 /* MVVMtrainings.swift */,
-				1192F7E42BA398A500CDA134 /* Assets.xcassets */,
-				1192F7E62BA398A500CDA134 /* Preview Content */,
+				112C846E2BA6FAF90040F59C /* SwiftDataProjectApp.swift */,
+				112C84702BA6FAF90040F59C /* ContentView.swift */,
+				112C84722BA6FAFB0040F59C /* Assets.xcassets */,
+				112C84742BA6FAFB0040F59C /* Preview Content */,
 			);
-			path = SwiftDataLearningProject;
+			path = SwiftDataProject;
 			sourceTree = "<group>";
 		};
-		1192F7E62BA398A500CDA134 /* Preview Content */ = {
+		112C84742BA6FAFB0040F59C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				1192F7E72BA398A500CDA134 /* Preview Assets.xcassets */,
+				112C84752BA6FAFB0040F59C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -83,42 +70,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1192F7DC2BA398A400CDA134 /* SwiftDataLearningProject */ = {
+		112C846A2BA6FAF90040F59C /* SwiftDataProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1192F7EB2BA398A500CDA134 /* Build configuration list for PBXNativeTarget "SwiftDataLearningProject" */;
+			buildConfigurationList = 112C84792BA6FAFB0040F59C /* Build configuration list for PBXNativeTarget "SwiftDataProject" */;
 			buildPhases = (
-				1192F7D92BA398A400CDA134 /* Sources */,
-				1192F7DA2BA398A400CDA134 /* Frameworks */,
-				1192F7DB2BA398A400CDA134 /* Resources */,
+				112C84672BA6FAF90040F59C /* Sources */,
+				112C84682BA6FAF90040F59C /* Frameworks */,
+				112C84692BA6FAF90040F59C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftDataLearningProject;
-			packageProductDependencies = (
-				115902DA2BA5E4D300B8ED05 /* SplineRuntime */,
-			);
-			productName = SwiftDataLearningProject;
-			productReference = 1192F7DD2BA398A400CDA134 /* SwiftDataLearningProject.app */;
+			name = SwiftDataProject;
+			productName = SwiftDataProject;
+			productReference = 112C846B2BA6FAF90040F59C /* SwiftDataProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1192F7D52BA398A400CDA134 /* Project object */ = {
+		112C84632BA6FAF90040F59C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					1192F7DC2BA398A400CDA134 = {
+					112C846A2BA6FAF90040F59C = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 1192F7D82BA398A400CDA134 /* Build configuration list for PBXProject "SwiftDataLearningProject" */;
+			buildConfigurationList = 112C84662BA6FAF90040F59C /* Build configuration list for PBXProject "SwiftDataProject" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,46 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 1192F7D42BA398A400CDA134;
-			packageReferences = (
-				115902D92BA5E4D300B8ED05 /* XCRemoteSwiftPackageReference "spline-ios" */,
-			);
-			productRefGroup = 1192F7DE2BA398A400CDA134 /* Products */;
+			mainGroup = 112C84622BA6FAF90040F59C;
+			productRefGroup = 112C846C2BA6FAF90040F59C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1192F7DC2BA398A400CDA134 /* SwiftDataLearningProject */,
+				112C846A2BA6FAF90040F59C /* SwiftDataProject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1192F7DB2BA398A400CDA134 /* Resources */ = {
+		112C84692BA6FAF90040F59C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1192F7E82BA398A500CDA134 /* Preview Assets.xcassets in Resources */,
-				1192F7E52BA398A500CDA134 /* Assets.xcassets in Resources */,
+				112C84762BA6FAFB0040F59C /* Preview Assets.xcassets in Resources */,
+				112C84732BA6FAFB0040F59C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1192F7D92BA398A400CDA134 /* Sources */ = {
+		112C84672BA6FAF90040F59C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1192F7E32BA398A400CDA134 /* ContentView.swift in Sources */,
-				11160D432BA5864300AF0316 /* MVVMtrainings.swift in Sources */,
-				1192F7E12BA398A400CDA134 /* SwiftDataLearningProjectApp.swift in Sources */,
+				112C84712BA6FAF90040F59C /* ContentView.swift in Sources */,
+				112C846F2BA6FAF90040F59C /* SwiftDataProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1192F7E92BA398A500CDA134 /* Debug */ = {
+		112C84772BA6FAFB0040F59C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		1192F7EA2BA398A500CDA134 /* Release */ = {
+		112C84782BA6FAFB0040F59C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,17 +264,16 @@
 			};
 			name = Release;
 		};
-		1192F7EC2BA398A500CDA134 /* Debug */ = {
+		112C847A2BA6FAFB0040F59C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataLearningProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftDataLearningProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,7 +284,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.SwiftDataLearningProject;
+				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.SwiftDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,17 +292,16 @@
 			};
 			name = Debug;
 		};
-		1192F7ED2BA398A500CDA134 /* Release */ = {
+		112C847B2BA6FAFB0040F59C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataLearningProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftDataLearningProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -334,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.SwiftDataLearningProject;
+				PRODUCT_BUNDLE_IDENTIFIER = me.kabali.ercan.SwiftDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,44 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1192F7D82BA398A400CDA134 /* Build configuration list for PBXProject "SwiftDataLearningProject" */ = {
+		112C84662BA6FAF90040F59C /* Build configuration list for PBXProject "SwiftDataProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1192F7E92BA398A500CDA134 /* Debug */,
-				1192F7EA2BA398A500CDA134 /* Release */,
+				112C84772BA6FAFB0040F59C /* Debug */,
+				112C84782BA6FAFB0040F59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1192F7EB2BA398A500CDA134 /* Build configuration list for PBXNativeTarget "SwiftDataLearningProject" */ = {
+		112C84792BA6FAFB0040F59C /* Build configuration list for PBXNativeTarget "SwiftDataProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1192F7EC2BA398A500CDA134 /* Debug */,
-				1192F7ED2BA398A500CDA134 /* Release */,
+				112C847A2BA6FAFB0040F59C /* Debug */,
+				112C847B2BA6FAFB0040F59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		115902D92BA5E4D300B8ED05 /* XCRemoteSwiftPackageReference "spline-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/splinetool/spline-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		115902DA2BA5E4D300B8ED05 /* SplineRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 115902D92BA5E4D300B8ED05 /* XCRemoteSwiftPackageReference "spline-ios" */;
-			productName = SplineRuntime;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1192F7D52BA398A400CDA134 /* Project object */;
+	rootObject = 112C84632BA6FAF90040F59C /* Project object */;
 }
