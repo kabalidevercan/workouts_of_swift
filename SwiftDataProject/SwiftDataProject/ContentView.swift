@@ -12,23 +12,14 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) var contextOfModel
     @State private var path = [User]()
+    @State private var showingUpComingOnly = false
+    @Query(sort:\User.name) var users:[User]
     
-    @Query(filter:#Predicate<User> {user in
-        if user.name.localizedStandardContains("R"){
-            if user.city == "London" {
-                return true
-            }else {
-                return false
-            }
-        }else {
-            return false
-        }
-    },sort:\User.name) var users:[User]
     
     var body: some View {
         NavigationStack(path: $path) {
-            List(users) { user in
-                NavigationLink(value: user) {
+            List(users){user in
+                NavigationLink(value: user){
                     Text(user.name)
                 }
             }
@@ -37,11 +28,6 @@ struct ContentView: View {
                 EditUserView(user: user)
             }
             .toolbar{
-                Button("Add User"){
-                    let newUser = User(name: "", city: "", joinDate: .now)
-                    contextOfModel.insert(newUser)
-                    path = [newUser]
-                }
                 Button("Add Samples", systemImage: "plus") {
                             
                     try? contextOfModel.delete(model:User.self)
@@ -56,6 +42,9 @@ struct ContentView: View {
                            contextOfModel.insert(third)
                            contextOfModel.insert(fourth)
                        }
+                Button(showingUpComingOnly ? "Show Everyone" : "Show Upcoming"){
+                    showingUpComingOnly.toggle()
+                }
             }
         }
     }
