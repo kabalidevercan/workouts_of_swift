@@ -55,7 +55,7 @@ struct DetailView: View {
             RatingView(rating: .constant(book.rating))
                 .font(.largeTitle)
             
-           Text("Published Date:\(SetDate(date:book.publishDate))")
+          Text("Published Date:\(SetDate(date:book.publishDate))")
               .padding(.top,20)
                 
         }
