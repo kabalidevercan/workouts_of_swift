@@ -19,15 +19,15 @@ class Book{
     var publishDate:Date
 
     
-    init(title: String, author: String, genre: String, review: String, rating: Int) {
+    init(title: String, author: String, genre: String, review: String, rating: Int,publishDate:Date) {
         self.title = title
         self.author = author
         self.genre = genre
         self.review = review
         self.rating = rating
-        self.publishDate = Date.now
+        self.publishDate = publishDate
     }
     
-    
-    
 }
+
+

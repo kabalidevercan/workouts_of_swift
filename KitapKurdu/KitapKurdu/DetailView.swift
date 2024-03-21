@@ -84,7 +84,7 @@ struct DetailView: View {
     do{
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let modelContainer = try ModelContainer(for: Book.self, configurations: config)
-        let example =  Book(title: "Nasrettin", author: "Ercan", genre: "Horror", review: "this was great a book that is first time in my life", rating: 3)
+        let example =  Book(title: "Nasrettin", author: "Ercan", genre: "Horror", review: "this was great a book that is first time in my life", rating: 3,publishDate: .now)
         
         return DetailView(book: example)
             .modelContainer(modelContainer)

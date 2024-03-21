@@ -46,9 +46,9 @@ struct ContentView: View {
                        // contextOfModel.insert(third)
                       //  contextOfModel.insert(fourth)
                  //   }
-                   // Button(showingUpComingOnly ? "Show Everyone" : "Show Upcoming"){
-                        //showingUpComingOnly.toggle()
-                    //}
+                    Button(showingUpComingOnly ? "Show Everyone" : "Show Upcoming"){
+                        showingUpComingOnly.toggle()
+                    }
                     Menu("Sort",systemImage: "arrow.up.arrow.down"){
                         Picker("Sort",selection: $sortOrder){
                             Text("Sort by name")
@@ -60,6 +60,11 @@ struct ContentView: View {
                                 .tag([
                                     SortDescriptor(\User.joinDate),
                                     SortDescriptor(\User.name),
+                                ])
+                            Text("Sallamasyon")
+                                .tag([
+                                    SortDescriptor(\User.name),
+                                    SortDescriptor(\User.name)
                                 ])
                         }
                     }

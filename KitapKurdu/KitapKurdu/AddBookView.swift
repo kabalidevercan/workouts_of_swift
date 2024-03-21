@@ -51,7 +51,7 @@ struct AddBookView: View {
                             dismiss()
                         }
                         
-                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
+                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating,publishDate: .now)
                         contextOfModel.insert(newBook)
                         // add the book
                     }
