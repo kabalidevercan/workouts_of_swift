@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113577B42BB9EFAC009B809F /* TestOfOnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113577B32BB9EFAC009B809F /* TestOfOnChange.swift */; };
+		113577B62BB9F278009B809F /* FilterImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113577B52BB9F278009B809F /* FilterImageContent.swift */; };
 		116E90132BB31A8C00E7CC2E /* Gulpembe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E90122BB31A8C00E7CC2E /* Gulpembe.swift */; };
 		119958A62BACD6C3001C5882 /* FilterImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119958A52BACD6C3001C5882 /* FilterImageApp.swift */; };
 		119958A82BACD6C3001C5882 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119958A72BACD6C3001C5882 /* ContentView.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113577B32BB9EFAC009B809F /* TestOfOnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOfOnChange.swift; sourceTree = "<group>"; };
+		113577B52BB9F278009B809F /* FilterImageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterImageContent.swift; sourceTree = "<group>"; };
 		116E90122BB31A8C00E7CC2E /* Gulpembe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gulpembe.swift; sourceTree = "<group>"; };
 		119958A22BACD6C3001C5882 /* FilterImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119958A52BACD6C3001C5882 /* FilterImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterImageApp.swift; sourceTree = "<group>"; };
@@ -55,7 +59,9 @@
 			children = (
 				119958A52BACD6C3001C5882 /* FilterImageApp.swift */,
 				119958A72BACD6C3001C5882 /* ContentView.swift */,
+				113577B32BB9EFAC009B809F /* TestOfOnChange.swift */,
 				116E90122BB31A8C00E7CC2E /* Gulpembe.swift */,
+				113577B52BB9F278009B809F /* FilterImageContent.swift */,
 				119958A92BACD6C5001C5882 /* Assets.xcassets */,
 				119958AB2BACD6C5001C5882 /* Preview Content */,
 			);
@@ -143,6 +149,8 @@
 				116E90132BB31A8C00E7CC2E /* Gulpembe.swift in Sources */,
 				119958A82BACD6C3001C5882 /* ContentView.swift in Sources */,
 				119958A62BACD6C3001C5882 /* FilterImageApp.swift in Sources */,
+				113577B42BB9EFAC009B809F /* TestOfOnChange.swift in Sources */,
+				113577B62BB9F278009B809F /* FilterImageContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
