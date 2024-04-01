@@ -8,31 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    @State private var stateOfValue = false
-    @State private var colorOfBackground = Color.black
+    @State private var processedImage : Image?
+    @State private var filterIntensity = 0.5
+    
+    
     var body: some View {
-        Button("Hello World"){
-            stateOfValue = true
+        NavigationStack{
+            VStack{
+                
+                if let processedImage {
+                    processedImage
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    ContentUnavailableView{
+                        Label("No Picture",systemImage: "photo.badge.plus")
+                    }description: {
+                        Text("There is nothing")
+                    }actions: {
+                        Button("Download A Pic"){
+                            
+                        }
+                        .buttonStyle(.borderedProminent)
+                        
+                    }
+                }
+                //image area
+            }
+            Spacer()
+            HStack{
+                Text("Intensity")
+                Slider(value: $filterIntensity)
+            }
+            .padding(.vertical)
+            HStack{
+                Button("Change Filter"){
+                    //change filter
+                }
+                .buttonStyle(.borderedProminent)
+                Spacer()
+                
+                //share the picture
+            }
+            
         }
-        .frame(width: 300,height: 300)
-        .background(colorOfBackground)
-        .confirmationDialog("Change background", isPresented: $stateOfValue){
-            Button("Color to red"){
-                colorOfBackground = .red
-            }
-            Button("Color to green"){
-                colorOfBackground = .green
-            }
-            Button("Color to purple"){
-                colorOfBackground = .purple
-            }
-            Button("Color to cyan"){
-                colorOfBackground = .cyan
-            }
-        }message: {
-            Text("Select NEW COLOR!!")
-        }
+        .padding([.horizontal,.bottom])
+        .navigationTitle("InstaFilter")
+        
     }
 }
 
