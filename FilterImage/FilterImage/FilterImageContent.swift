@@ -20,6 +20,34 @@ struct FilterImageContent: View {
             image?
                 .resizable()
                 .scaledToFill()
+            
+            
+            ContentUnavailableView("Welcome to Canva",systemImage: "lasso.badge.sparkles")
+            
+            ContentUnavailableView{
+                Image(systemName: "rectangle.portrait.and.arrow.right")
+                    .padding(.bottom,20)
+            }description: {
+                Text("Let's Sign Up to see what's going on")
+            }actions: {
+                Button("Sign Up"){
+                    
+                }
+                .buttonStyle(.borderedProminent)
+            }
+            
+            /*ContentUnavailableView{
+                Text("This section is gonna be title")
+                    
+            }description: {
+                Text("This section is gonna be description")
+            }actions: {
+                Button("Create a random snippet m.f"){
+                    
+                }
+                .buttonStyle(.borderedProminent)
+            }*/
+            
         }
         .onAppear(perform: {
             loadImage()
@@ -32,6 +60,7 @@ struct FilterImageContent: View {
         
         let contextOfCI = CIContext()
         let currentFilter = CIFilter.twirlDistortion()
+        
         
         currentFilter.inputImage = beginImage
         
