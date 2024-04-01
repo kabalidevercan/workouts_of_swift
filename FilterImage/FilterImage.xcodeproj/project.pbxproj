@@ -15,6 +15,7 @@
 		119958AA2BACD6C5001C5882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119958A92BACD6C5001C5882 /* Assets.xcassets */; };
 		119958AD2BACD6C5001C5882 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119958AC2BACD6C5001C5882 /* Preview Assets.xcassets */; };
 		11A9838A2BBA949E00441DFA /* PhotosUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A983892BBA949E00441DFA /* PhotosUITest.swift */; };
+		11A9838C2BBACAAE00441DFA /* SelectImageAndImagesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9838B2BBACAAE00441DFA /* SelectImageAndImagesTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		119958A92BACD6C5001C5882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119958AC2BACD6C5001C5882 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11A983892BBA949E00441DFA /* PhotosUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUITest.swift; sourceTree = "<group>"; };
+		11A9838B2BBACAAE00441DFA /* SelectImageAndImagesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageAndImagesTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				116E90122BB31A8C00E7CC2E /* Gulpembe.swift */,
 				113577B52BB9F278009B809F /* FilterImageContent.swift */,
 				11A983892BBA949E00441DFA /* PhotosUITest.swift */,
+				11A9838B2BBACAAE00441DFA /* SelectImageAndImagesTest.swift */,
 				119958A92BACD6C5001C5882 /* Assets.xcassets */,
 				119958AB2BACD6C5001C5882 /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 				113577B42BB9EFAC009B809F /* TestOfOnChange.swift in Sources */,
 				11A9838A2BBA949E00441DFA /* PhotosUITest.swift in Sources */,
 				113577B62BB9F278009B809F /* FilterImageContent.swift in Sources */,
+				11A9838C2BBACAAE00441DFA /* SelectImageAndImagesTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
