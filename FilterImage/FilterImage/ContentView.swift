@@ -6,35 +6,72 @@
 //
 
 import SwiftUI
+import PhotosUI
+import CoreImage
+import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
     @State private var processedImage : Image?
     @State private var filterIntensity = 0.5
+    @State private var selectedItem: PhotosPickerItem?
+    @State private var currentFilter = CIFilter.sepiaTone()
+    let context = CIContext()
     
+    func changeFilter(){
+        
+    }
+    
+    func applyProcessing(){
+        currentFilter.intensity = Float(filterIntensity)
+        
+        guard let outputImage = currentFilter.outputImage else {return}
+        guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else {return}
+        
+        let uiImage = UIImage(cgImage: cgImage)
+        processedImage = Image(uiImage: uiImage)
+        
+    }
+    
+    func loadImage(){
+        Task{
+            guard let imageData = try await selectedItem?.loadTransferable(type: Data.self) else {return }
+            guard let inputImage = UIImage(data: imageData) else {return }
+            let beginImage = CIImage(image: inputImage)
+            currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+            applyProcessing()
+            
+            //more code to come
+        }
+    }
     
     var body: some View {
         NavigationStack{
             VStack{
                 
-                if let processedImage {
-                    processedImage
-                        .resizable()
-                        .scaledToFit()
-                } else {
-                    ContentUnavailableView{
-                        Label("No Picture",systemImage: "photo.badge.plus")
-                    }description: {
-                        Text("There is nothing")
-                    }actions: {
-                        Button("Download A Pic"){
-                            
+                PhotosPicker(selection:$selectedItem){
+                    if let processedImage {
+                        processedImage
+                            .resizable()
+                            .scaledToFit()
+                    }else {
+                        ContentUnavailableView{
+                            Label("No Picture",systemImage: "photo")
+                        }description: {
+                            Text("Import a photo to get started")
+                        }actions: {
+                            Button("Import"){
+                                
+                            }
+                            .buttonStyle(.borderedProminent)
                         }
-                        .buttonStyle(.borderedProminent)
-                        
                     }
                 }
+                
+                
                 //image area
             }
+            .onChange(of:selectedItem,loadImage)
+            
             Spacer()
             HStack{
                 Text("Intensity")
@@ -42,18 +79,16 @@ struct ContentView: View {
             }
             .padding(.vertical)
             HStack{
-                Button("Change Filter"){
-                    //change filter
-                }
+                Button("Change Filter",action: changeFilter)
+                    //change fi
                 .buttonStyle(.borderedProminent)
-                Spacer()
                 
                 //share the picture
             }
+            .navigationTitle("InstaFilter")
             
         }
         .padding([.horizontal,.bottom])
-        .navigationTitle("InstaFilter")
         
     }
 }

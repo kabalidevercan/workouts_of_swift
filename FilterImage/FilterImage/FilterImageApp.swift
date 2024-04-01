@@ -11,7 +11,7 @@ import SwiftUI
 struct FilterImageApp: App {
     var body: some Scene {
         WindowGroup {
-            GetAppStoreReview()
+            ContentView()
         }
     }
 }

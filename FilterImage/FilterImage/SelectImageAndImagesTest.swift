@@ -18,7 +18,7 @@ struct SelectImageAndImagesTest: View {
     var body: some View {
         VStack{
             PhotosPicker(selection: $listOfPickerItems,maxSelectionCount: 3,matching: .images){
-                Label("z;xlc;'z;'c.o", systemImage: "photo")
+                Label("Get Photos", systemImage: "photo")
             }
             
         }
