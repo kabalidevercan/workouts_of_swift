@@ -10,7 +10,7 @@ import PhotosUI
 import CoreImage
 import CoreImage.CIFilterBuiltins
 
-struct ContentView: View {
+struct InstaFilterDeneme: View {
     @State private var processedImage: Image?
     @State private var filterIntensity = 0.5
     @State private var selectedItem : PhotosPickerItem?
@@ -106,7 +106,8 @@ struct ContentView: View {
                     
 
                 Spacer()
-
+                
+                
                 HStack {
                     Text("Intensity")
 
@@ -118,7 +119,7 @@ struct ContentView: View {
                    
                 }
                 .padding(.vertical)
-
+            
                 HStack(spacing:20){
                     
                     
@@ -152,5 +153,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    InstaFilterDeneme()
 }
