@@ -17,15 +17,31 @@ struct ContentView: View {
     @State private var currentFilter : CIFilter = CIFilter.sepiaTone()
     let context = CIContext()
     @State private var showingFilters = false
+    @AppStorage("filterCount") var filterCount = 0
+    @Environment(\.requestReview) var requestReview
     
-    func setFilter(_ filter: CIFilter) {
+  @MainActor  func setFilter(_ filter: CIFilter) {
         currentFilter = filter
         loadImage()
+        
+        filterCount += 1
+        
+        if filterCount >= 3 {
+            requestReview()
+        }
     }
     
     
     func applyProcessing(){
-        currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
+
+        let inputKeys = currentFilter.inputKeys
+        
+        if inputKeys.contains(kCIInputIntensityKey){currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)}
+        
+        if inputKeys.contains(kCIInputRadiusKey){currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey)}
+        
+        if inputKeys.contains(kCIInputScaleKey){currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey)}
+        
         
         guard let outputImage = currentFilter.outputImage else {return}
         guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else {return}
@@ -53,6 +69,9 @@ struct ContentView: View {
     }
     
     
+
+    
+    
     var body: some View{
         NavigationStack {
             VStack {
@@ -76,17 +95,10 @@ struct ContentView: View {
                         }
                     }
                 }
-                .onChange(of: selectedItem,loadImage)
+                .onChange(of:selectedItem){
+                    loadImage()
+                }
                     
-                    
-                    //loadImage() //BURDA DIGER TURLU DE YAZILABILIR EGER UYGULAMA CALISMAZSA BUNA DIKKAT ET !!!!!!!!!!!!!!!
-                    
-                    /*
-                     .onChange(of:selectedItem,loadImage)
-                     */
-                
-
-                // image area
 
                 Spacer()
 
@@ -97,18 +109,21 @@ struct ContentView: View {
                 }
                 .padding(.vertical)
 
-                HStack {
+                HStack(spacing:20){
                     Button("Change Filter",action: changeFilter)
-
-                    Spacer()
-
+                        .buttonStyle(.borderedProminent)
                     // share the picture
+                    
+                    if let processedImage {
+                        ShareLink(item: processedImage,preview: SharePreview("FilterImage", image: processedImage))
+                    }
+                    
                 }
             }
             .padding([.horizontal, .bottom])
             .navigationTitle("Instafilter")
             .confirmationDialog("Select a Filter", isPresented: $showingFilters){
-                
+                                
                 Button("Crystallize") { setFilter(CIFilter.crystallize()) }
                 Button("Edges") { setFilter(CIFilter.edges()) }
                 Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur()) }
