@@ -11,7 +11,7 @@ import SwiftUI
 struct FellowTravellerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FellowTravellerForYou()
         }
     }
 }

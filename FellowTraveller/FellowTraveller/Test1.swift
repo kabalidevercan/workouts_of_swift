@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Test1: View {
     
+    //Codable,Equatable,Identifiable
+    
     let users = [
         User(firstName: "Ercan", lastName: "Kabali"),
         User(firstName: "Mehmet", lastName: "Kadikoy"),
@@ -32,6 +34,8 @@ struct Test1: View {
         
     }
 }
+
+//Codable,Equatable,Identifiable
 
 struct User: Identifiable ,Comparable{
     let id = UUID()
