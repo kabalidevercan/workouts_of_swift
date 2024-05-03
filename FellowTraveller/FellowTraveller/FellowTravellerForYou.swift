@@ -25,7 +25,7 @@ struct FellowTravellerForYou: View {
                 ForEach(locations){location in
                     
                     Annotation(location.name,coordinate: location.coordinate){
-                        Image(systemName: "folder")
+                        Image(systemName: "")
                             .resizable()
                             .foregroundStyle(.red)
                             .frame(width: 44,height: 44)
