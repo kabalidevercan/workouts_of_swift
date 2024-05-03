@@ -25,12 +25,10 @@ struct FellowTravellerForYou: View {
                 ForEach(locations){location in
                     
                     Annotation(location.name,coordinate: location.coordinate){
-                        Image(systemName: "")
+                        Image(systemName: "map.circle.fill")
                             .resizable()
-                            .foregroundStyle(.red)
+                            .foregroundStyle(.red.opacity(0.6))
                             .frame(width: 44,height: 44)
-                            .background(.white)
-                            .clipShape(.circle)
                             .onLongPressGesture{
                                 selectedPlace = location
                             }
@@ -41,6 +39,7 @@ struct FellowTravellerForYou: View {
                 if let coordinate = proxy.convert(position,from: .local){
                     let newLocation = Location(id: UUID(), name: "New Location", description: "", latitude: coordinate.latitude, longitude: coordinate.longitude)
                     locations.append(newLocation)
+                    print("\(coordinate.latitude) ve \(coordinate.longitude)")
                 }
             }
             .sheet(item:$selectedPlace){place in
