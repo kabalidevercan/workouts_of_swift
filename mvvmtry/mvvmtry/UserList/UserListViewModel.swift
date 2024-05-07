@@ -28,3 +28,12 @@ final class UserListViewModel: ObservableObject {
         }
     }
 }
+
+
+
+@MainActor
+final class ModelOfUserListView : ObservableObject {
+    @Published var users: [UserModel]?
+    
+}
+
