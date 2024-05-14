@@ -23,6 +23,9 @@ struct newBindable: View {
     }
 }
 
+
+
+
 @Observable
 class GetContact {
     
