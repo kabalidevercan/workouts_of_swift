@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1118089A2BF3378600909B94 /* BindingAndBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111808992BF3378600909B94 /* BindingAndBindable.swift */; };
+		1118089C2BF34ECD00909B94 /* newBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118089B2BF34ECD00909B94 /* newBindable.swift */; };
 		116257112BE9FEE3006BAFB6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116257102BE9FEE3006BAFB6 /* UserModel.swift */; };
 		116257132BE9FF75006BAFB6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116257122BE9FF75006BAFB6 /* WebService.swift */; };
 		116257152BEA0180006BAFB6 /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116257142BEA0180006BAFB6 /* ErrorCases.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111808992BF3378600909B94 /* BindingAndBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingAndBindable.swift; sourceTree = "<group>"; };
+		1118089B2BF34ECD00909B94 /* newBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newBindable.swift; sourceTree = "<group>"; };
 		116257102BE9FEE3006BAFB6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		116257122BE9FF75006BAFB6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		116257142BEA0180006BAFB6 /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		11AB119B2BE9308900124A1B /* mvvmtry */ = {
 			isa = PBXGroup;
 			children = (
+				111808992BF3378600909B94 /* BindingAndBindable.swift */,
+				1118089B2BF34ECD00909B94 /* newBindable.swift */,
 				11AB119C2BE9308900124A1B /* mvvmtryApp.swift */,
 				116257182BEA0ABE006BAFB6 /* UserList */,
 				116257192BEA0B1F006BAFB6 /* WebService */,
@@ -166,11 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11AB119F2BE9308900124A1B /* UserListView.swift in Sources */,
+				1118089A2BF3378600909B94 /* BindingAndBindable.swift in Sources */,
 				116257172BEA01A5006BAFB6 /* UserListViewModel.swift in Sources */,
 				116257112BE9FEE3006BAFB6 /* UserModel.swift in Sources */,
 				116257152BEA0180006BAFB6 /* ErrorCases.swift in Sources */,
 				116257132BE9FF75006BAFB6 /* WebService.swift in Sources */,
 				11AB119D2BE9308900124A1B /* mvvmtryApp.swift in Sources */,
+				1118089C2BF34ECD00909B94 /* newBindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

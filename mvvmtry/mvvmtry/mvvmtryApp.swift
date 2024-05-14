@@ -11,7 +11,7 @@ import SwiftUI
 struct mvvmtryApp: App {
     var body: some Scene {
         WindowGroup {
-            UserListView()
+            newBindable()
         }
     }
 }
