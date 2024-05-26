@@ -10,21 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.blue)
-                .frame(width: 300, height: 300)
-                .onTapGesture {
-                    print("Rectangle tapped!")
-                }
-
-            Circle()
-                .fill(.red)
-                .frame(width: 300, height: 300)
-                .onTapGesture {
-                    print("Circle tapped!")
-                }
+        VStack{
+            HStack{
+                Text("KBL")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text("Yazılım")
+                    .font(.caption)
+                    .fontWeight(.heavy)
+                
+            }
+            
+            
+            Text("Teknoloji ve Dijital Dönüşüm Dostunuz: İhtiyaçlarınızı Teknolojiyle Buluşturuyoruz...")
+                .frame(width: 300,height:100,alignment: .leading)
+                
         }
+        
     }
 }
 
