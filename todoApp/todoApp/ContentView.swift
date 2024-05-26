@@ -9,18 +9,31 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var showCreate = false
+    @State private var showCreateToDo = false
     @State private var toDoEdit: ToDoItem?
+    @State private var showCreateCategory = false
+    @State private var searchQuery = ""
     
-    @Query(
-        filter: #Predicate<ToDoItem> {
-            $0.isCompleted == false
-        },
-        sort: \.timestamp,
-        order:.forward
-    ) private var items : [ToDoItem]
+    @Query private var items : [ToDoItem]
     
     @Environment(\.modelContext) var context
+    
+    var filteredItems : [ToDoItem] {
+        
+        if searchQuery.isEmpty {
+            return items
+        }
+        
+        let filtereditem = items.compactMap{ item in
+            let titleContainsQuery = item.title.range(of: searchQuery,
+                                                       options : .caseInsensitive
+            ) != nil
+            
+            return titleContainsQuery ? item : nil
+        }
+        
+        return filtereditem
+    }
     
     
     var body: some View {
@@ -92,28 +105,50 @@ struct ContentView: View {
             }
                 
             .navigationTitle("My To Do List")
-                .toolbar{
-                    ToolbarItem {
-                        Button(action: {
-                            showCreate.toggle()
-                        }, label: {
-                            Label("Add Item",systemImage: "plus")
-                        })
-                    }
-                }
-                .sheet(isPresented: $showCreate, content: {
+            .searchable(text: $searchQuery,prompt:"Search for a to do or a category")
+                .sheet(isPresented: $showCreateToDo, content: {
                     NavigationStack{
                         CreateView()
                     }
                     .presentationDetents([.medium])
                 })
-                .sheet(item: $toDoEdit){
-                    toDoEdit = nil
-                    
-                } content: {item in
-                        UpdateToDoView(item: item)
+                .sheet(item: $toDoEdit,
+                       onDismiss: {
+                        toDoEdit = nil
+                },
+                       content: {editItem in
+                    NavigationStack{
+                        UpdateToDoView(item: editItem)
+                            .interactiveDismissDisabled()
+                    }
                 }
-                
+            )
+                .sheet(isPresented: $showCreateCategory, content: {
+                    NavigationStack{
+                        CreateCategoryView()
+                    }
+                })
+                .toolbar{
+                    ToolbarItem(placement: .topBarTrailing){
+                        Button("New Category"){
+                            showCreateCategory.toggle()
+                        }
+                    }
+                }
+                .safeAreaInset(edge: .bottom , alignment: .leading){
+                    Button(action: {
+                        showCreateToDo.toggle()
+                    },label : {
+                        Label("New ToDo",systemImage: "plus")
+                            .bold()
+                            .font(.title2)
+                            .padding(8)
+                            .background(.gray.opacity(0.1),in:Capsule())
+                            .padding(.leading)
+                            .symbolVariant(.circle.fill)
+                    })
+                }
+                        
         }
     }
 }
