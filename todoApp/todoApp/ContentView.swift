@@ -10,7 +10,16 @@ import SwiftData
 
 struct ContentView: View {
     @State private var showCreate = false
-    @Query private var items: [ToDoItem]
+    @State private var toDoEdit: ToDoItem?
+    
+    @Query(
+        filter: #Predicate<ToDoItem> {
+            $0.isCompleted == false
+        },
+        sort: \.timestamp,
+        order:.forward
+    ) private var items : [ToDoItem]
+    
     @Environment(\.modelContext) var context
     
     
@@ -20,6 +29,7 @@ struct ContentView: View {
                 ForEach(items){item in
                     HStack {
                         VStack(alignment: .leading){
+                         
                             
                             if item.isCritical {
                                 Image(systemName: "exclamationmark.3")
@@ -34,6 +44,15 @@ struct ContentView: View {
                                 .bold()
                             
                             Text("\(item.timestamp,format: Date.FormatStyle(date: .numeric,time: .shortened))")
+                            
+                            if let category = item.category {
+                                Text(category.title)
+                                    .foregroundStyle(Color.blue)
+                                    .bold()
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 8) 
+                                    .background(Color.blue.opacity(0.1),in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            }
                             
                         }
                         Spacer()
@@ -61,10 +80,14 @@ struct ContentView: View {
                                 .symbolVariant(.fill)
                         }
                         
+                        Button{
+                            toDoEdit = item
+                        } label: {
+                            Label("Edit", systemImage: "pencil")
+                        }
+                        .tint(.orange)
+                        
                     }
-                    
-                    
-                    
                 }
             }
                 
@@ -84,6 +107,12 @@ struct ContentView: View {
                     }
                     .presentationDetents([.medium])
                 })
+                .sheet(item: $toDoEdit){
+                    toDoEdit = nil
+                    
+                } content: {item in
+                        UpdateToDoView(item: item)
+                }
                 
         }
     }

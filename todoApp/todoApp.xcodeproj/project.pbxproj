@@ -13,6 +13,8 @@
 		118C48A92C0245A5009C61E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118C48A82C0245A5009C61E1 /* Preview Assets.xcassets */; };
 		118C48B02C02463F009C61E1 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C48AF2C02463F009C61E1 /* ToDo.swift */; };
 		118C48B22C024724009C61E1 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C48B12C024724009C61E1 /* CreateView.swift */; };
+		118C48B42C0325C0009C61E1 /* UpdateToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C48B32C0325C0009C61E1 /* UpdateToDoView.swift */; };
+		118C48B62C033646009C61E1 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C48B52C033646009C61E1 /* CreateCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		118C48A82C0245A5009C61E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		118C48AF2C02463F009C61E1 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		118C48B12C024724009C61E1 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		118C48B32C0325C0009C61E1 /* UpdateToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateToDoView.swift; sourceTree = "<group>"; };
+		118C48B52C033646009C61E1 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				118C48A12C0245A4009C61E1 /* todoAppApp.swift */,
 				118C48A32C0245A4009C61E1 /* ContentView.swift */,
+				118C48B52C033646009C61E1 /* CreateCategoryView.swift */,
+				118C48B32C0325C0009C61E1 /* UpdateToDoView.swift */,
 				118C48AF2C02463F009C61E1 /* ToDo.swift */,
 				118C48B12C024724009C61E1 /* CreateView.swift */,
 				118C48A52C0245A5009C61E1 /* Assets.xcassets */,
@@ -143,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118C48B62C033646009C61E1 /* CreateCategoryView.swift in Sources */,
 				118C48B02C02463F009C61E1 /* ToDo.swift in Sources */,
 				118C48A42C0245A4009C61E1 /* ContentView.swift in Sources */,
 				118C48B22C024724009C61E1 /* CreateView.swift in Sources */,
+				118C48B42C0325C0009C61E1 /* UpdateToDoView.swift in Sources */,
 				118C48A22C0245A4009C61E1 /* todoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
