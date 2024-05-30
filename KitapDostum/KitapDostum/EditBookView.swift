@@ -149,10 +149,13 @@ struct EditBookView: View {
     
 }
 
-/*
+
 #Preview {
-    NavigationStack{
-        EditBookView()
+
+    
+    return  NavigationStack{
+        
+        EditBookView(book: Book.sampleBooks[4])
     }
 }
-*/
+
